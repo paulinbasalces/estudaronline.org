@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudar Online | Conhecimento sem Barreiras</title>
+    <meta name="description" content="Acesse cursos gratuitos, graduações e formações técnicas de grandes instituições. Curadoria rigorosa para o seu crescimento pessoal e profissional.">
+    <link rel="canonical" href="https://estudaronline.org/">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#lista-ferramentas">Pular direto para os cursos</a>
+
+    <header class="cabecalho-site">
+        <div class="container nav-bar">
+            <a class="logotipo" href="./index.html">Estudar<span>Online</span></a>
+            <div class="controles-a11y">
+                <button type="button" id="btn-fonte-menos" class="btn-a11y" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button type="button" id="btn-fonte-mais" class="btn-a11y" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button type="button" id="btn-tema" class="btn-a11y" aria-label="Alternar modo escuro e claro">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="conteudo-principal">
+        <section class="hero">
+            <p class="hero-kicker">Curadoria de Aprendizado Gratuito</p>
+            <h1 class="hero-title">Supere os pontos de exclusão do aprendizado tradicional</h1>
+            <p class="hero-subtitle">Mapeamos as melhores plataformas gratuitas e com certificação para você assumir o controle do seu futuro.</p>
+            
+            <div class="hero-metricas">
+                <span class="metrica-card"><strong id="total-ferramentas">0</strong><small>Cursos e Plataformas</small></span>
+                <span class="metrica-card"><strong id="total-categorias">0</strong><small>Áreas de Estudo</small></span>
+                <span class="metrica-card"><strong>100%</strong><small>Gratuitos e Validados</small></span>
+            </div>
+            
+            <div class="busca-container" role="search">
+                <div class="busca-form">
+                    <input id="campo-busca" type="search" placeholder="O que você deseja aprender hoje?" autocomplete="off">
+                    <div class="busca-acoes">
+                        <button type="button" id="btn-limpar-busca" class="btn-busca secundario">Limpar Busca</button>
+                    </div>
+                </div>
+            </div>
+            
+            <nav id="bento-menu" class="bento-grid-container" aria-label="Filtros por categoria"></nav>
+        </section>
+
+        <div class="area-adsense ads-vip">
+            <p class="ads-label">Apoio e Publicidade</p>
+        </div>
+
+        <section class="painel-curadoria">
+            <div>
+                <p class="section-kicker">Nossos Critérios</p>
+                <h2 id="titulo-curadoria">Análise estratégica focada no aluno</h2>
+                <p>Nós investigamos os sistemas educacionais para garantir que você encontre rotas de acesso reais, sem taxas escondidas ou falsas promessas.</p>
+            </div>
+            <ul class="criterios-lista">
+                <li class="criterio-card">
+                    <strong>Acesso Real</strong>
+                    <span>Testamos cada link para garantir que o conteúdo seja 100% gratuito e não apenas um período de teste limitante.</span>
+                </li>
+                <li class="criterio-card">
+                    <strong>Valor Comprovado</strong>
+                    <span>Priorizamos instituições reconhecidas que oferecem certificação válida para fortalecer seu portfólio.</span>
+                </li>
+            </ul>
+        </section>
+
+        <p id="status-resultados" class="status-resultados" aria-live="polite">Organizando os recursos de aprendizado...</p>
+        <div id="lista-ferramentas"></div>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="artigo-titulo">
+            <button type="button" class="btn-fechar" id="fechar-modal" aria-label="Fechar janela de detalhes">✕</button>
+            <div class="modal-header-compacto">
+                <span id="artigo-emoji" class="emoji-medio"></span>
+                <div>
+                    <h2 id="artigo-titulo">Carregando...</h2>
+                    <span id="artigo-categoria" class="tag-categoria">Categoria</span>
+                </div>
+            </div>
+            <div class="dor-box">
+                <strong>Barreira Oculta Resolvida:</strong>
+                <p id="artigo-dor"></p>
+            </div>
+            <div class="artigo-corpo">
+                <p id="artigo-descricao"></p>
+                <dl class="detalhes-editoriais">
+                    <div>
+                        <dt>Ideal Para</dt>
+                        <dd id="artigo-melhor-para"></dd>
+                    </div>
+                    <div>
+                        <dt>Fique Atento</dt>
+                        <dd id="artigo-cuidado"></dd>
+                    </div>
+                </dl>
+            </div>
+            <div class="acoes-ferramenta">
+                <a id="artigo-link" href="#" target="_blank" class="btn-primario" rel="noopener noreferrer">Acessar Plataforma Oficial</a>
+                <div class="share-buttons">
+                    <p class="share-title">Fortaleça sua comunidade. Indique este recurso:</p>
+                    <div class="share-icons" id="botoes-compartilhamento"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="rodape-site">
+        <div class="container">
+            <p>&copy; 2026 Estudar Online. Democratizando o acesso ao conhecimento.</p>
+            <nav class="links-rodape">
+                <a href="sobre.html">Como avaliamos</a>
+                <a href="privacidade.html">Sua Privacidade</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
