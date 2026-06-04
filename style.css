@@ -1,23 +1,32 @@
 /* ========================================================================
-ESTUDARONLINE.ORG — CORES, ACESSIBILIDADE E LAYOUT FUTURISTA (UX/UI VER.)
-Diretrizes Visuais: Alta Performance, Contraste Extremo (WCAG AAA) e Estética Cyber-Minimalista.
+ESTUDARONLINE.ORG — CORES VIBRANTES E CRIATIVIDADE (PALETA CUSTOMIZADA)
+Diretrizes Visuais: Fundo escuro/vibrante, alto impacto, fuga do padrão web clássico.
 ========================================================================
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* Paleta Light Core — "Hyper-Light Reality" */
-  --bg-base: #F8F9FD;
-  --card-bg: #FFFFFF;
-  --text-main: #0B001A;
-  --text-muted: #534B5C;
-  --accent-primary: #5900FF;      /* Electric Violet */
-  --accent-secondary: #FF0055;    /* Cyber Neon Pink */
-  --accent-tertiary: #00E5FF;     /* Photon Cyan */
-  --accent-soft: #F0E6FF;         /* Ultra Soft Purple */
-  --border-light: #E2DCE8;
-  --shadow-glow: rgba(89, 0, 255, 0.08);
+  /* Paleta Base Fornecida */
+  --indigo: #540d6e;
+  --watermelon: #ee4266;
+  --golden-pollen: #ffd23f;
+  --turquoise: #3bceac;
+  --jungle-green: #0ead69;
+  
+  /* Gradiente Global Fornecido */
+  --gradient-main: linear-gradient(90deg, var(--indigo), var(--watermelon), var(--golden-pollen), var(--turquoise), var(--jungle-green));
+
+  /* Mapeamento de UI Principal (Modo Vibrante/Criativo - Fugindo do Branco) */
+  --bg-base: #2D053C; /* Um tom ainda mais escuro do Indigo para dar profundidade */
+  --card-bg: var(--indigo);
+  --text-main: #FFFFFF;
+  --text-muted: #F8C8E6; /* Rosa suave para leitura secundária sem perder a cor */
+  --accent-primary: var(--watermelon);
+  --accent-secondary: var(--golden-pollen);
+  --accent-tertiary: var(--turquoise);
+  --border-light: rgba(255, 210, 63, 0.2); /* Golden Pollen translúcido */
+  --shadow-glow: rgba(238, 66, 102, 0.3); /* Sombra Watermelon */
   
   /* Sistema de Cantos e Fontes */
   --font-global: 'Plus Jakarta Sans', sans-serif;
@@ -27,18 +36,14 @@ Diretrizes Visuais: Alta Performance, Contraste Extremo (WCAG AAA) e Estética C
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme="dark"] {
-  /* Paleta Dark Core — "Deep Quantum Void" */
-  --bg-base: #040108;
-  --card-bg: #0D061A;
-  --text-main: #F4F0FA;
-  --text-muted: #A396B2;
-  --accent-primary: #00FFCC;      /* Matrix Teal / Quantum Cyan */
-  --accent-secondary: #BD00FF;    /* Proton Purple */
-  --accent-tertiary: #FF0055;     /* Cyber Pink */
-  --accent-soft: #140826;         /* Void Lavender Deep */
-  --border-light: #25163D;
-  --shadow-glow: rgba(0, 255, 204, 0.15);
+[data-theme="light"] {
+  /* Inversão Criativa (Caso o usuário alterne, mantemos a identidade forte) */
+  --bg-base: #FFF7EB; /* Fundo creme quente, não branco puro */
+  --card-bg: #FFFFFF;
+  --text-main: var(--indigo);
+  --text-muted: #6B427A;
+  --border-light: rgba(84, 13, 110, 0.15);
+  --shadow-glow: rgba(84, 13, 110, 0.15);
 }
 
 /* Reset Geral Avançado e Comportamentos de Tela */
@@ -64,6 +69,18 @@ body {
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Barra de Topo Colorida usando o Gradiente */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: var(--gradient-main);
+  z-index: 9999;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -79,7 +96,7 @@ body {
   position: absolute;
   top: -200px;
   left: 32px;
-  background: var(--accent-secondary);
+  background: var(--accent-primary);
   color: #FFFFFF;
   padding: 14px 28px;
   z-index: 9999;
@@ -89,13 +106,13 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  box-shadow: 0 10px 30px rgba(255, 0, 85, 0.4);
+  box-shadow: 0 10px 30px var(--shadow-glow);
   transition: top 0.3s ease;
 }
 
 .skip-link:focus {
   top: 32px;
-  outline: 4px solid var(--text-main);
+  outline: 4px solid var(--accent-secondary);
 }
 
 button:focus-visible, a:focus-visible, input:focus-visible {
@@ -103,7 +120,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   outline-offset: 4px;
 }
 
-/* Cabeçalho Flutuante com Efeito Glassmorphism */
+/* Cabeçalho Flutuante com Efeito Glassmorphism Colorido */
 .cabecalho-site {
   position: sticky;
   top: 24px;
@@ -114,22 +131,23 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .nav-bar {
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-light);
+  background: rgba(84, 13, 110, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-pill);
   padding: 14px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 12px 40px rgba(11, 0, 26, 0.04);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
   transition: var(--transition-smooth);
 }
 
-[data-theme="dark"] .nav-bar {
-  background: rgba(13, 6, 26, 0.7);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+[data-theme="light"] .nav-bar {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid var(--border-light);
+  box-shadow: 0 12px 40px rgba(84, 13, 110, 0.08);
 }
 
 .logotipo {
@@ -142,20 +160,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .logotipo span {
-  color: var(--accent-primary);
+  color: var(--accent-tertiary); /* Turquoise */
   font-weight: 500;
-  position: relative;
 }
 
-.logotipo span::after {
-  content: '';
-  position: absolute;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--accent-secondary);
-  border-radius: 2px;
+[data-theme="light"] .logotipo span {
+  color: var(--accent-primary);
 }
 
 .controles-a11y {
@@ -164,8 +174,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-a11y {
-  background: var(--card-bg);
-  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--text-main);
   font-weight: 700;
   font-family: var(--font-display);
@@ -177,66 +187,70 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   align-items: center;
   justify-content: center;
   transition: var(--transition-smooth);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+[data-theme="light"] .btn-a11y {
+  background: var(--bg-base);
+  border-color: var(--border-light);
 }
 
 .btn-a11y:hover {
   transform: translateY(-2px);
-  border-color: var(--accent-primary);
-  color: var(--accent-primary);
-  box-shadow: 0 0 15px var(--shadow-glow);
+  border-color: var(--accent-secondary);
+  background: var(--accent-primary);
+  color: #FFF;
 }
 
-/* Hero Section Futurista */
+/* Hero Section Futurista e Orgânica */
 .hero {
   text-align: center;
-  padding: 100px 0 60px;
+  padding: 120px 0 60px;
   position: relative;
 }
 
 .hero::before {
   content: '';
   position: absolute;
-  top: -10%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 400px;
-  background: radial-gradient(circle, rgba(89, 0, 255, 0.05) 0%, rgba(255,255,255,0) 70%);
+  width: 800px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(238, 66, 102, 0.15) 0%, rgba(60, 206, 172, 0.05) 50%, rgba(0,0,0,0) 80%);
   z-index: -1;
   pointer-events: none;
 }
 
-[data-theme="dark"] .hero::before {
-  background: radial-gradient(circle, rgba(0, 255, 204, 0.08) 0%, rgba(0,0,0,0) 70%);
-}
-
 .hero-kicker {
   display: inline-block;
-  background: var(--accent-soft);
-  color: var(--accent-primary);
+  background: var(--jungle-green);
+  color: #FFFFFF;
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.8rem;
-  padding: 8px 18px;
+  font-size: 0.85rem;
+  padding: 8px 20px;
   border-radius: var(--radius-pill);
   margin-bottom: 24px;
   letter-spacing: 2px;
-  border: 1px solid rgba(89, 0, 255, 0.15);
-}
-
-[data-theme="dark"] .hero-kicker {
-  border-color: rgba(0, 255, 204, 0.2);
+  box-shadow: 0 4px 15px rgba(14, 173, 105, 0.4);
 }
 
 .hero-title {
   font-family: var(--font-display);
   font-size: 4rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--text-main);
   margin-bottom: 24px;
   line-height: 1.05;
   letter-spacing: -2px;
+}
+
+/* Detalhe de texto no gradiente */
+.hero-title span {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
@@ -247,7 +261,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-weight: 500;
 }
 
-/* Painel de Métricas Neo-Brutalismo Sutil */
+/* Painel de Métricas */
 .hero-metricas {
   display: flex;
   justify-content: center;
@@ -262,7 +276,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: var(--radius-card);
   padding: 24px 36px;
   min-width: 220px;
-  box-shadow: 0 8px 30px rgba(11, 0, 26, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);
@@ -271,18 +285,21 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .metrica-card::before {
   content: '';
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  background: var(--accent-secondary); /* Golden Pollen */
 }
+
+.metrica-card:nth-child(2)::before { background: var(--accent-tertiary); }
+.metrica-card:nth-child(3)::before { background: var(--jungle-green); }
 
 .metrica-card strong {
   display: block;
   font-family: var(--font-display);
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 2.8rem;
+  font-weight: 800;
   color: var(--text-main);
   line-height: 1;
   margin-bottom: 6px;
@@ -296,7 +313,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   letter-spacing: 0.5px;
 }
 
-/* Container de Busca Avançado */
+/* Container de Busca com Borda Dourada */
 .busca-container {
   max-width: 760px;
   margin: 0 auto;
@@ -304,17 +321,19 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .busca-form {
   display: flex;
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border: 2px solid var(--border-light);
   border-radius: var(--radius-pill);
   padding: 8px;
-  box-shadow: 0 16px 40px rgba(11, 0, 26, 0.04);
   transition: var(--transition-smooth);
 }
 
+[data-theme="light"] .busca-form { background: var(--card-bg); }
+
 .busca-form:focus-within {
-  border-color: var(--accent-primary);
-  box-shadow: 0 0 25px var(--shadow-glow);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 0 25px rgba(255, 210, 63, 0.2);
   transform: translateY(-2px);
 }
 
@@ -339,25 +358,21 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-busca {
-  background: var(--text-main);
+  background: var(--accent-primary);
   border: none;
   padding: 16px 32px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--bg-base);
+  color: #FFFFFF;
   transition: var(--transition-smooth);
 }
 
 .btn-busca:hover {
-  background: var(--accent-primary);
-  color: #FFFFFF;
-  box-shadow: 0 8px 20px var(--shadow-glow);
-}
-
-[data-theme="dark"] .btn-busca:hover {
-  color: #000000;
+  background: var(--accent-secondary);
+  color: var(--indigo);
+  box-shadow: 0 8px 20px rgba(255, 210, 63, 0.4);
 }
 
 /* Menu de Filtros Estilo Bento Grid Dinâmico */
@@ -370,9 +385,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .bento-card {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-light);
-  padding: 14px 24px;
+  padding: 12px 24px;
   border-radius: var(--radius-pill);
   cursor: pointer;
   display: flex;
@@ -384,36 +399,29 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
+[data-theme="light"] .bento-card { background: var(--card-bg); }
+
 .bento-card:hover {
-  border-color: var(--text-main);
+  border-color: var(--accent-tertiary);
   color: var(--text-main);
   transform: translateY(-2px);
 }
 
-.bento-card strong {
-  font-family: var(--font-display);
-  opacity: 0.5;
-}
-
 .bento-card[aria-pressed="true"] {
-  background: var(--text-main);
-  border-color: var(--text-main);
-  color: var(--bg-base);
+  background: var(--accent-tertiary);
+  border-color: var(--accent-tertiary);
+  color: var(--indigo);
 }
 
 .bento-card[aria-pressed="true"] strong {
-  opacity: 0.9;
-  color: var(--accent-secondary);
-}
-
-[data-theme="dark"] .bento-card[aria-pressed="true"] strong {
-  color: var(--accent-primary);
+  color: var(--indigo);
+  opacity: 0.7;
 }
 
 /* Bloco de Monetização e Ads Integrado */
 .area-adsense {
-  background: linear-gradient(135deg, var(--accent-soft) 0%, var(--card-bg) 100%);
-  border: 1px dashed var(--border-light);
+  background: var(--card-bg);
+  border: 2px dashed var(--border-light);
   text-align: center;
   border-radius: var(--radius-card);
   min-height: 130px;
@@ -425,26 +433,16 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   overflow: hidden;
 }
 
-.area-adsense::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: var(--accent-tertiary);
-}
-
 .ads-label {
   color: var(--text-muted);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: var(--font-display);
 }
 
-/* Painel de Curadoria Avançado */
+/* Painel de Curadoria */
 .painel-curadoria {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -480,12 +478,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   padding: 28px;
   border-radius: var(--radius-card);
   border-left: 6px solid var(--accent-primary);
-  box-shadow: 0 10px 32px rgba(11, 0, 26, 0.02);
   transition: var(--transition-smooth);
 }
 
 .criterio-card:hover {
   transform: translateX(4px);
+  border-left-color: var(--accent-secondary);
 }
 
 .criterio-card strong {
@@ -514,10 +512,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-size: 1.1rem;
 }
 
-[data-theme="dark"] .status-resultados {
-  color: var(--accent-primary);
-}
-
 /* Seções de Categorias e Grid de Artigos */
 .sessao-categoria {
   margin-bottom: 80px;
@@ -531,17 +525,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   padding-bottom: 16px;
   font-weight: 700;
   letter-spacing: -1px;
-  position: relative;
-}
-
-.sessao-titulo::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 80px;
-  height: 2px;
-  background: var(--accent-secondary);
 }
 
 .grid-cards {
@@ -550,7 +533,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   gap: 32px;
 }
 
-/* Card de Plataformas / Cursos — Design Futurista Premium */
+/* Card de Plataformas / Cursos */
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border-light);
@@ -560,18 +543,15 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   flex-direction: column;
   position: relative;
   transition: var(--transition-smooth);
-  box-shadow: 0 10px 30px rgba(11, 0, 26, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
+
+[data-theme="light"] .card { box-shadow: 0 10px 30px rgba(84, 13, 110, 0.05); }
 
 .card:hover {
   transform: translateY(-6px);
-  border-color: var(--text-main);
-  box-shadow: 0 20px 40px rgba(11, 0, 26, 0.06);
-}
-
-[data-theme="dark"] .card:hover {
-  border-color: var(--accent-primary);
-  box-shadow: 0 20px 40px rgba(0, 255, 204, 0.05);
+  border-color: var(--accent-secondary);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .card-topo {
@@ -582,20 +562,22 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .card-emoji {
-  font-size: 1.6rem;
-  background: var(--bg-base);
-  width: 52px;
-  height: 52px;
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.1);
+  width: 56px;
+  height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 14px;
+  border-radius: 16px;
   border: 1px solid var(--border-light);
 }
 
+[data-theme="light"] .card-emoji { background: var(--bg-base); }
+
 .card-tag {
-  background: var(--accent-soft);
-  color: var(--accent-primary);
+  background: var(--jungle-green);
+  color: #FFFFFF;
   padding: 6px 14px;
   border-radius: var(--radius-pill);
   font-size: 0.75rem;
@@ -603,10 +585,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-family: var(--font-display);
-}
-
-[data-theme="dark"] .card-tag {
-  background: rgba(0, 255, 204, 0.1);
 }
 
 .card h3 {
@@ -620,15 +598,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .card-desc {
   font-weight: 700;
-  color: var(--accent-secondary);
+  color: var(--accent-secondary); /* Golden Pollen */
   margin-bottom: 16px;
   font-size: 1.05rem;
   line-height: 1.4;
 }
 
-[data-theme="dark"] .card-desc {
-  color: var(--text-main);
-}
+[data-theme="light"] .card-desc { color: var(--accent-primary); }
 
 .card-editorial {
   color: var(--text-muted);
@@ -659,13 +635,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-card-abrir:hover {
-  background: var(--text-main);
-  border-color: var(--text-main);
-  color: var(--bg-base);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #FFFFFF;
 }
 
 .link-card-oficial {
-  color: var(--accent-primary);
+  color: var(--accent-tertiary);
   font-weight: 800;
   text-decoration: none;
   font-family: var(--font-display);
@@ -684,7 +660,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(4, 1, 8, 0.85);
+  background: rgba(45, 5, 60, 0.85); /* Fundo Indigo Escuro */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
@@ -705,25 +681,18 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
-  animation: modalEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-@keyframes modalEnter {
-  from { opacity: 0; transform: scale(0.96) translateY(10px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
 }
 
 .btn-fechar {
   position: absolute;
   top: 24px;
   right: 24px;
-  background: var(--bg-base);
+  background: rgba(255, 255, 255, 0.1);
   border: 1px solid var(--border-light);
   width: 44px;
   height: 44px;
   border-radius: 50%;
   cursor: pointer;
-  font-weight: 400;
   font-size: 1.2rem;
   color: var(--text-main);
   display: flex;
@@ -732,10 +701,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
+[data-theme="light"] .btn-fechar { background: var(--bg-base); }
+
 .btn-fechar:hover {
   transform: rotate(90deg);
-  background: var(--accent-secondary);
-  border-color: var(--accent-secondary);
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
   color: #FFFFFF;
 }
 
@@ -750,7 +721,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .emoji-medio {
   font-size: 2.8rem;
-  background: var(--bg-base);
+  background: rgba(255, 255, 255, 0.05);
   padding: 16px;
   border-radius: 18px;
   border: 1px solid var(--border-light);
@@ -765,12 +736,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .dor-box {
-  background: linear-gradient(90deg, var(--accent-soft), transparent);
+  background: rgba(255, 255, 255, 0.05);
   padding: 24px;
   border-radius: 16px;
-  border-left: 6px solid var(--accent-tertiary);
+  border-left: 6px solid var(--accent-tertiary); /* Turquoise */
   margin: 32px 0;
 }
+
+[data-theme="light"] .dor-box { background: var(--bg-base); }
 
 .dor-box strong {
   color: var(--text-main);
@@ -806,21 +779,25 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .detalhes-editoriais div {
-  background: var(--bg-base);
+  background: rgba(255, 255, 255, 0.03);
   padding: 24px;
   border-radius: 18px;
   border: 1px solid var(--border-light);
 }
 
+[data-theme="light"] .detalhes-editoriais div { background: var(--bg-base); }
+
 .detalhes-editoriais dt {
   font-family: var(--font-display);
   font-weight: 700;
-  color: var(--accent-primary);
+  color: var(--accent-secondary); /* Golden Pollen */
   margin-bottom: 6px;
   font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
+[data-theme="light"] .detalhes-editoriais dt { color: var(--accent-primary); }
 
 .detalhes-editoriais dd {
   font-weight: 500;
@@ -830,11 +807,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .acoes-ferramenta {
-  background: var(--bg-base);
+  background: rgba(255, 255, 255, 0.03);
   padding: 32px;
   border-radius: 20px;
   border: 1px solid var(--border-light);
 }
+
+[data-theme="light"] .acoes-ferramenta { background: var(--bg-base); }
 
 .btn-primario {
   display: block;
@@ -853,12 +832,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .btn-primario:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px var(--shadow-glow);
-  filter: brightness(1.1);
-}
-
-[data-theme="dark"] .btn-primario {
-  color: #000000;
+  background: var(--accent-secondary);
+  color: var(--indigo);
+  box-shadow: 0 12px 30px rgba(255, 210, 63, 0.4);
 }
 
 .share-buttons {
@@ -876,7 +852,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-share {
-  background: var(--card-bg);
+  background: rgba(255, 255, 255, 0.05);
   color: var(--text-main);
   border: 2px solid var(--border-light);
   padding: 16px;
@@ -888,10 +864,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
+[data-theme="light"] .btn-share { background: var(--bg-base); }
+
 .btn-share:hover {
-  border-color: var(--text-main);
-  background: var(--text-main);
-  color: var(--bg-base);
+  border-color: var(--accent-tertiary);
+  background: var(--accent-tertiary);
+  color: var(--indigo);
 }
 
 /* Rodapé Limpo e Técnico */
