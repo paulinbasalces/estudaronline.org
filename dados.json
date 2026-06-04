@@ -37,6 +37,15 @@
   },
   {
     "id": "eo-005",
+    "nome": "W3Schools [Sem Certificado]",
+    "categoria": "Programação e Tecnologia",
+    "emoji": "🌐",
+    "dor_resolvida": "Falta de documentação rápida, interativa e direta para consulta de linguagens web (HTML, CSS, JS).",
+    "descricao": "O maior tutorial web do mundo. Permite testar o código diretamente no navegador. O acesso ao conhecimento é irrestrito e vitalício, mas os exames de certificação são cobrados em dólar.",
+    "url": "https://www.w3schools.com/"
+  },
+  {
+    "id": "eo-006",
     "nome": "Chief of Design [Sem Certificado]",
     "categoria": "Design e UX/UI",
     "emoji": "🎨",
@@ -45,7 +54,7 @@
     "url": "https://www.youtube.com/c/chiefofdesign"
   },
   {
-    "id": "eo-006",
+    "id": "eo-007",
     "nome": "UX Unicórnio (YouTube) [Sem Certificado]",
     "categoria": "Design e UX/UI",
     "emoji": "🦄",
@@ -54,7 +63,7 @@
     "url": "https://www.youtube.com/c/UXUnic%C3%B3rnio"
   },
   {
-    "id": "eo-007",
+    "id": "eo-008",
     "nome": "Hashtag Treinamentos [Sem Certificado]",
     "categoria": "Pacote Office e Dados",
     "emoji": "📊",
@@ -63,7 +72,7 @@
     "url": "https://www.youtube.com/c/HashtagTreinamentos"
   },
   {
-    "id": "eo-008",
+    "id": "eo-009",
     "nome": "Fundação Bradesco",
     "categoria": "Pacote Office e Dados",
     "emoji": "📈",
@@ -72,7 +81,16 @@
     "url": "https://www.ev.org.br/"
   },
   {
-    "id": "eo-009",
+    "id": "eo-010",
+    "nome": "Kaggle",
+    "categoria": "Pacote Office e Dados",
+    "emoji": "🤖",
+    "dor_resolvida": "Falta de ambiente prático e bancos de dados reais para treinar análise de dados e Machine Learning.",
+    "descricao": "A maior comunidade de Ciência de Dados do mundo oferece micro-cursos (Python, SQL, visualização de dados) rápidos, aplicados e com emissão de certificados gratuitos ao final de cada trilha.",
+    "url": "https://www.kaggle.com/learn"
+  },
+  {
+    "id": "eo-011",
     "nome": "Kultivi",
     "categoria": "Idiomas e Preparatórios",
     "emoji": "🗣️",
@@ -81,7 +99,7 @@
     "url": "https://kultivi.com/"
   },
   {
-    "id": "eo-010",
+    "id": "eo-012",
     "nome": "Aprenda Mais (MEC)",
     "categoria": "Idiomas e Preparatórios",
     "emoji": "🇧🇷",
@@ -90,7 +108,7 @@
     "url": "https://aprendamais.mec.gov.br/"
   },
   {
-    "id": "eo-011",
+    "id": "eo-013",
     "nome": "Duolingo [Acesso Livre]",
     "categoria": "Idiomas e Preparatórios",
     "emoji": "🦉",
@@ -99,7 +117,7 @@
     "url": "https://pt.duolingo.com/"
   },
   {
-    "id": "eo-012",
+    "id": "eo-014",
     "nome": "Escola Virtual do Governo (EV.G)",
     "categoria": "Gestão e Negócios",
     "emoji": "🏛️",
@@ -108,7 +126,7 @@
     "url": "https://www.escolavirtual.gov.br/"
   },
   {
-    "id": "eo-013",
+    "id": "eo-015",
     "nome": "Sebrae",
     "categoria": "Gestão e Negócios",
     "emoji": "💡",
@@ -117,7 +135,7 @@
     "url": "https://www.sebrae.com.br/sites/PortalSebrae/cursosonline"
   },
   {
-    "id": "eo-014",
+    "id": "eo-016",
     "nome": "FGV Educação Executiva",
     "categoria": "Gestão e Negócios",
     "emoji": "🎓",
@@ -126,7 +144,25 @@
     "url": "https://educacao-executiva.fgv.br/cursos/gratuitos"
   },
   {
-    "id": "eo-015",
+    "id": "eo-017",
+    "nome": "ILB (Senado Federal)",
+    "categoria": "Gestão e Negócios",
+    "emoji": "📜",
+    "dor_resolvida": "Falta de embasamento sobre o Poder Legislativo, administração pública e orçamento da união.",
+    "descricao": "O Instituto Legislativo Brasileiro oferece cursos abertos e com certificação. Excelentes para horas complementares em cursos de Direito e para concurseiros em fase inicial de preparação.",
+    "url": "https://saberes.senado.leg.br/"
+  },
+  {
+    "id": "eo-018",
+    "nome": "Coursera [Modo Ouvinte]",
+    "categoria": "Gestão e Negócios",
+    "emoji": "🌍",
+    "dor_resolvida": "Exclusão global: impossibilidade de pagar pelo conhecimento das universidades mais caras do planeta.",
+    "descricao": "Possui a opção oculta de 'Modo Ouvinte' (Audit) na maioria dos cursos. Permite assistir a todas as aulas de Stanford, Google ou Yale de graça, porém a emissão do certificado permanece bloqueada.",
+    "url": "https://www.coursera.org/"
+  },
+  {
+    "id": "eo-019",
     "nome": "B3 Educação",
     "categoria": "Finanças e Investimentos",
     "emoji": "💸",
@@ -135,7 +171,7 @@
     "url": "https://edu.b3.com.br/"
   },
   {
-    "id": "eo-016",
+    "id": "eo-020",
     "nome": "CVM Educacional",
     "categoria": "Finanças e Investimentos",
     "emoji": "⚖️",
@@ -144,7 +180,7 @@
     "url": "https://www.investidor.gov.br/menu/Menu_Academico/Cursos_online.html"
   },
   {
-    "id": "eo-017",
+    "id": "eo-021",
     "nome": "Sesc (Cursos Livres)",
     "categoria": "Formação Técnica e Cultura",
     "emoji": "🎭",
@@ -153,7 +189,7 @@
     "url": "https://ead.sesc.com.br/"
   },
   {
-    "id": "eo-018",
+    "id": "eo-022",
     "nome": "SENAI EAD",
     "categoria": "Formação Técnica e Cultura",
     "emoji": "⚙️",
@@ -162,7 +198,7 @@
     "url": "https://ead.senai.br/"
   },
   {
-    "id": "eo-019",
+    "id": "eo-023",
     "nome": "SENAC EAD (Cursos Livres)",
     "categoria": "Formação Técnica e Cultura",
     "emoji": "🏪",
@@ -171,7 +207,7 @@
     "url": "https://www.ead.senac.br/gratuito/"
   },
   {
-    "id": "eo-020",
+    "id": "eo-024",
     "nome": "SEST SENAT EAD",
     "categoria": "Formação Técnica e Cultura",
     "emoji": "🚚",
@@ -180,7 +216,25 @@
     "url": "https://ead.sestsenat.org.br/"
   },
   {
-    "id": "eo-021",
+    "id": "eo-025",
+    "nome": "SENAR EAD",
+    "categoria": "Formação Técnica e Cultura",
+    "emoji": "🌾",
+    "dor_resolvida": "Desconhecimento técnico e de gestão aplicados especificamente ao agronegócio e empreendedorismo rural.",
+    "descricao": "Focado inteiramente no setor que mais cresce no país. Oferece qualificação técnica, gestão de propriedades rurais e sustentabilidade ambiental, com emissão de certificado chancelado pelo Sistema S.",
+    "url": "https://ead.senar.org.br/"
+  },
+  {
+    "id": "eo-026",
+    "nome": "GINEAD [Sem Certificado]",
+    "categoria": "Formação Técnica e Cultura",
+    "emoji": "📚",
+    "dor_resolvida": "Dificuldade de encontrar vasto material teórico gratuito apostilado para leitura e revisão rápida.",
+    "descricao": "O portal possui centenas de cursos curtos em áreas diversas. Acesso total ao material didático, porém a emissão do certificado de conclusão e avaliação está vinculada ao pagamento de uma taxa administrativa.",
+    "url": "https://www.ginead.com.br/"
+  },
+  {
+    "id": "eo-027",
     "nome": "CIEE Saber Virtual",
     "categoria": "Carreira e Jovem Aprendiz",
     "emoji": "🎯",
@@ -189,7 +243,7 @@
     "url": "https://sabervirtual.ciee.org.br/"
   },
   {
-    "id": "eo-022",
+    "id": "eo-028",
     "nome": "Escola do Trabalhador 4.0",
     "categoria": "Carreira e Jovem Aprendiz",
     "emoji": "🖱️",
@@ -198,7 +252,7 @@
     "url": "https://escoladotrabalhador40.mte.gov.br/"
   },
   {
-    "id": "eo-023",
+    "id": "eo-029",
     "nome": "Rock University",
     "categoria": "Carreira e Jovem Aprendiz",
     "emoji": "📱",
@@ -207,12 +261,39 @@
     "url": "https://rockcontent.com/br/university/"
   },
   {
-    "id": "eo-024",
+    "id": "eo-030",
+    "nome": "Recode",
+    "categoria": "Carreira e Jovem Aprendiz",
+    "emoji": "💡",
+    "dor_resolvida": "Exclusão de jovens em situação de vulnerabilidade do mercado tecnológico por falta de letramento primário.",
+    "descricao": "Focado no empoderamento digital. Ensina desde a criação de aplicativos básicos até o desenvolvimento de competências socioemocionais para a resolução de problemas na comunidade.",
+    "url": "https://recode.org.br/"
+  },
+  {
+    "id": "eo-031",
     "nome": "UNIVESP (Aulas Públicas) [Sem Certificado]",
     "categoria": "Graduação e Ciências",
     "emoji": "🧪",
     "dor_resolvida": "Ausência de aulas estruturadas de nível superior para autodidatas que desejam aprender disciplinas densas.",
     "descricao": "O maior acervo acadêmico público do YouTube brasileiro. Contém grades inteiras de Engenharia e Computação da Universidade Virtual de SP. Não emite diplomas, apenas repassa o conhecimento puro.",
     "url": "https://www.youtube.com/user/univesptv"
+  },
+  {
+    "id": "eo-032",
+    "nome": "Khan Academy [Acesso Livre]",
+    "categoria": "Graduação e Ciências",
+    "emoji": "🔢",
+    "dor_resolvida": "Déficit grave de aprendizagem em matemática básica, avançada, física e biologia do ensino regular.",
+    "descricao": "Uma ONG global com o melhor sistema de ensino de exatas do mundo. Ensina do básico ao cálculo universitário. O modelo gamificado mapeia suas deficiências, mas não substitui a escola formal nem emite diploma.",
+    "url": "https://pt.khanacademy.org/"
+  },
+  {
+    "id": "eo-033",
+    "nome": "edX [Modo Ouvinte]",
+    "categoria": "Graduação e Ciências",
+    "emoji": "🏛️",
+    "dor_resolvida": "Impossibilidade geográfica e financeira de acessar a vanguarda científica das universidades americanas.",
+    "descricao": "Agregador criado pelo MIT e Harvard. Permite que o aluno acesse o material e as aulas das melhores universidades do mundo sem pagar nada. O bloqueio (trade-off) ocorre na etapa final, onde a validação e o certificado são pagos.",
+    "url": "https://www.edx.org/"
   }
 ]
