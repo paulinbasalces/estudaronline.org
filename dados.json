@@ -1,0 +1,92 @@
+[
+  {
+    "id": "eo-001",
+    "nome": "Google Ateliê Digital",
+    "categoria": "Tecnologia e Marketing",
+    "emoji": "🚀",
+    "dor_resolvida": "Necessidade de entrar no mercado digital com um certificado de peso, sem pagar nada.",
+    "descricao": "Plataforma oficial do Google que oferece cursos gratuitos de marketing digital, dados e tecnologia. O curso 'Fundamentos do Marketing Digital' inclui certificação profissional gratuita.",
+    "url": "https://learndigital.withgoogle.com/ateliedigital"
+  },
+  {
+    "id": "eo-002",
+    "nome": "Kultivi",
+    "categoria": "Idiomas e Preparatórios",
+    "emoji": "🗣️",
+    "dor_resolvida": "Falta de dinheiro para pagar escolas de idiomas ou cursinhos preparatórios.",
+    "descricao": "Projeto de ensino gratuito que oferece cursos completos de Inglês, Espanhol, Francês, além de preparatórios para exames, concursos e ENEM. Emite certificado gratuito ao concluir a carga horária.",
+    "url": "https://kultivi.com/"
+  },
+  {
+    "id": "eo-003",
+    "nome": "Escola Virtual do Governo (EV.G)",
+    "categoria": "Governo e Administração",
+    "emoji": "🏛️",
+    "dor_resolvida": "Precisar de horas complementares e certificação válida em todo o território nacional.",
+    "descricao": "Iniciativa do Governo Federal que disponibiliza centenas de cursos de curta e média duração (ética, gestão, tecnologia). Certificados são gerados automaticamente e são aceitos na maioria das instituições.",
+    "url": "https://www.escolavirtual.gov.br/"
+  },
+  {
+    "id": "eo-004",
+    "nome": "Fundação Bradesco - Escola Virtual",
+    "categoria": "Cursos Livres e Finanças",
+    "emoji": "📊",
+    "dor_resolvida": "Ausência de noções financeiras, administrativas e de informática no currículo.",
+    "descricao": "Uma das instituições mais tradicionais do Brasil. Oferece trilhas de conhecimento em administração, contabilidade, finanças pessoais, tecnologia e desenvolvimento pessoal, 100% online e com certificado.",
+    "url": "https://www.ev.org.br/"
+  },
+  {
+    "id": "eo-005",
+    "nome": "SENAI EAD",
+    "categoria": "Formação Técnica",
+    "emoji": "⚙️",
+    "dor_resolvida": "Dificuldade de conseguir o primeiro emprego por falta de conhecimento técnico prático.",
+    "descricao": "O SENAI disponibiliza cursos gratuitos online de competências transversais (Lógica de Programação, Finanças, Empreendedorismo) e iniciação profissional, altamente reconhecidos pela indústria.",
+    "url": "https://ead.senai.br/"
+  },
+  {
+    "id": "eo-006",
+    "nome": "CS50 - Harvard (via edX)",
+    "categoria": "Tecnologia e Marketing",
+    "emoji": "💻",
+    "dor_resolvida": "Vontade de aprender programação do zero com a melhor metodologia do mundo, mas sem custo.",
+    "descricao": "O curso de introdução à ciência da computação da Universidade de Harvard. É possível cursar a versão completa gratuitamente. O certificado validado é pago, mas o conhecimento é integral e de altíssimo nível.",
+    "url": "https://www.edx.org/course/introduction-computer-science-harvardx-cs50x"
+  },
+  {
+    "id": "eo-007",
+    "nome": "Sebrae",
+    "categoria": "Empreendedorismo",
+    "emoji": "💡",
+    "dor_resolvida": "Não saber como começar um negócio próprio ou trabalhar como freelancer (PJ).",
+    "descricao": "Cursos rápidos sobre empreendedorismo, vendas, marketing, inovação e finanças para quem deseja abrir uma empresa ou otimizar um pequeno negócio. Certificados liberados de imediato.",
+    "url": "https://www.sebrae.com.br/sites/PortalSebrae/cursosonline"
+  },
+  {
+    "id": "eo-008",
+    "nome": "UNIVESP (Aulas Públicas)",
+    "categoria": "Graduação",
+    "emoji": "🎓",
+    "dor_resolvida": "Desejo de aceder a aulas de nível superior (graduação) estruturadas sem ter de passar num vestibular ou pagar propinas.",
+    "descricao": "A Universidade Virtual do Estado de São Paulo disponibiliza na íntegra as videoaulas dos seus cursos de Engenharia, Computação e Matemática no YouTube. Excelente para autodidatas estudarem no nível de graduação.",
+    "url": "https://www.youtube.com/user/univesptv"
+  },
+  {
+    "id": "eo-009",
+    "nome": "Microsoft Learn",
+    "categoria": "Tecnologia e Marketing",
+    "emoji": "☁️",
+    "dor_resolvida": "Falta de um caminho claro para dominar ferramentas e serviços requisitados por empresas de tecnologia.",
+    "descricao": "Plataforma de treino da Microsoft. Ensina desde o básico de inteligência artificial e nuvem (Azure) até competências avançadas de desenvolvimento. Formação excelente para se preparar para as vagas do futuro.",
+    "url": "https://learn.microsoft.com/pt-br/"
+  },
+  {
+    "id": "eo-010",
+    "nome": "Duolingo",
+    "categoria": "Idiomas e Preparatórios",
+    "emoji": "🦉",
+    "dor_resolvida": "Trava e desmotivação ao tentar aprender o vocabulário básico de um novo idioma.",
+    "descricao": "Embora seja conhecido pelo formato de jogo, o Duolingo é uma ferramenta validada cientificamente para autodidatas darem os primeiros passos noutros idiomas com apenas 15 minutos por dia.",
+    "url": "https://pt.duolingo.com/"
+  }
+]
