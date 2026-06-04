@@ -1,35 +1,29 @@
 /* ========================================================================
-ESTUDARONLINE.ORG — CORES VIBRANTES E DESIGN SYSTEM PROFISSIONAL
-Diretrizes Visuais: Fundo muito escuro/vibrante, alto impacto, fuga de padrões convencionais.
-Regra de Ouro: PROIBIDO o uso de #000000 e #FFFFFF.
+ESTUDARONLINE.ORG — DESIGN SYSTEM "SOLARPUNK URBANO"
+Diretrizes Visuais: Contraste absoluto, fuga do branco/preto puros. 
+Vibração através da paleta Deep Purple, Amber, Off-White e Neon Green.
 ========================================================================
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* Paleta Base Fornecida - Inédita e Vibrante */
-  --indigo: #540d6e;
-  --watermelon: #ee4266;
-  --golden-pollen: #ffd23f;
-  --turquoise: #3bceac;
-  --jungle-green: #0ead69;
+  /* PALETA LIGHT (Modo Claro Vibrante e Quente) */
+  --bg-base: #F4F1EA; /* Off-White cru, reduz a refração de luz */
+  --card-bg: #FCFAF8; /* Quase branco, mas aquecido */
+  --text-main: #2A0845; /* Deep Purple, substitui o preto com mais personalidade */
+  --text-muted: #6A4B82; /* Deep Purple dessaturado */
   
-  /* Gradiente Global */
-  --gradient-main: linear-gradient(90deg, var(--indigo), var(--watermelon), var(--golden-pollen), var(--turquoise), var(--jungle-green));
-
-  /* Mapeamento de UI Principal (Sem Branco Puro ou Preto Puro) */
-  --bg-base: #1a0422; /* Fundo hiper profundo, puxado para um Roxo Cósmico escuro */
-  --card-bg: var(--indigo); /* Cards adotam o Índigo como bloco sólido */
-  --text-main: #fdfcfd; /* Off-White suave com levíssimo toque quente, excelente para leitura no escuro */
-  --text-muted: #f29ec0; /* Rosa suave e vibrante para subtítulos (derivado do Watermelon) */
-  --accent-primary: var(--watermelon);
-  --accent-secondary: var(--golden-pollen);
-  --accent-tertiary: var(--turquoise);
-  --border-light: rgba(255, 210, 63, 0.25); /* Bordas com toque de Golden Pollen */
-  --shadow-glow: rgba(238, 66, 102, 0.4); /* Brilho Watermelon para estados ativos */
+  /* Cores de Ação */
+  --accent-primary: #FFB300; /* Amber: Chamadas principais e botões */
+  --accent-secondary: #0EA759; /* Neon Green adaptado para alto contraste no claro */
+  --accent-tertiary: #4A1578; /* Deep Purple intermediário para tags */
+  --accent-soft: #FFF2D1; /* Fundo suave do Amber */
   
-  /* Sistema de Cantos e Fontes */
+  --border-light: rgba(42, 8, 69, 0.12);
+  --shadow-glow: rgba(255, 179, 0, 0.25);
+  
+  /* Sistema Estrutural */
   --font-global: 'Plus Jakarta Sans', sans-serif;
   --font-display: 'Space Grotesk', sans-serif;
   --radius-card: 20px;
@@ -37,14 +31,21 @@ Regra de Ouro: PROIBIDO o uso de #000000 e #FFFFFF.
   --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-[data-theme="light"] {
-  /* Inversão Segura: Mantém vibração mas em tons claros. NUNCA usar branco puro. */
-  --bg-base: #fdfaf7; /* Fundo creme super claro */
-  --card-bg: #f5f0fb; /* Fundo de card lilás super claro */
-  --text-main: var(--indigo);
-  --text-muted: #883556; /* Vermelho escuro/vinho */
-  --border-light: rgba(84, 13, 110, 0.15);
-  --shadow-glow: rgba(84, 13, 110, 0.2);
+[data-theme="dark"] {
+  /* PALETA DARK (Modo Escuro Imersivo e Focado) */
+  --bg-base: #130321; /* Deep Purple quase abissal */
+  --card-bg: #21093A; /* Elevação do Deep Purple para os cards */
+  --text-main: #F4F1EA; /* Off-White claro e nítido */
+  --text-muted: #A895BC; /* Lilás acinzentado suave */
+  
+  /* Cores de Ação (Inversão de hierarquia para brilho no escuro) */
+  --accent-primary: #00FF66; /* Neon Green puro assumindo a liderança de clique */
+  --accent-secondary: #FFC107; /* Amber auxiliando nos detalhes */
+  --accent-tertiary: #FF007F; /* Um toque magenta cyber para tags especiais */
+  --accent-soft: #301050; /* Base profunda roxa para caixas de ênfase */
+  
+  --border-light: rgba(244, 241, 234, 0.08);
+  --shadow-glow: rgba(0, 255, 102, 0.15);
 }
 
 /* Reset Geral Avançado */
@@ -70,15 +71,15 @@ body {
   transition: background-color 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Barra Superior de Energia Vibrante */
+/* Linha de Progresso Global Superior */
 body::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 8px;
-  background: var(--gradient-main);
+  height: 6px;
+  background: linear-gradient(90deg, var(--text-main), var(--accent-primary), var(--accent-secondary));
   z-index: 9999;
 }
 
@@ -97,8 +98,8 @@ body::before {
   position: absolute;
   top: -200px;
   left: 32px;
-  background: var(--accent-primary);
-  color: var(--text-main);
+  background: var(--text-main);
+  color: var(--bg-base);
   padding: 14px 28px;
   z-index: 9999;
   border-radius: 12px;
@@ -121,7 +122,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   outline-offset: 4px;
 }
 
-/* Navegação Principal */
+/* Navegação Principal Glassmorphism */
 .cabecalho-site {
   position: sticky;
   top: 24px;
@@ -132,23 +133,22 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .nav-bar {
-  background: rgba(84, 13, 110, 0.7);
+  background: rgba(252, 250, 248, 0.8);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(253, 252, 253, 0.15);
+  border: 1px solid var(--border-light);
   border-radius: var(--radius-pill);
   padding: 14px 32px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 12px 40px rgba(26, 4, 34, 0.4);
+  box-shadow: 0 12px 35px rgba(42, 8, 69, 0.08);
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .nav-bar {
-  background: rgba(253, 250, 247, 0.85);
-  border: 1px solid var(--border-light);
-  box-shadow: 0 12px 40px rgba(84, 13, 110, 0.08);
+[data-theme="dark"] .nav-bar {
+  background: rgba(33, 9, 58, 0.7);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
 .logotipo {
@@ -161,7 +161,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .logotipo span {
-  color: var(--accent-secondary); /* Golden Pollen */
+  color: var(--accent-secondary);
   font-weight: 500;
 }
 
@@ -171,8 +171,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-a11y {
-  background: rgba(253, 252, 253, 0.1);
-  border: 1px solid rgba(253, 252, 253, 0.2);
+  background: var(--bg-base);
+  border: 1px solid var(--border-light);
   color: var(--text-main);
   font-weight: 700;
   font-family: var(--font-display);
@@ -186,20 +186,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .btn-a11y {
-  background: var(--bg-base);
-  border-color: var(--border-light);
-}
-
 .btn-a11y:hover {
   transform: translateY(-2px);
-  border-color: var(--accent-secondary);
-  background: var(--accent-primary);
-  color: var(--text-main);
-  box-shadow: 0 5px 15px var(--shadow-glow);
+  border-color: var(--text-main);
+  background: var(--text-main);
+  color: var(--bg-base);
 }
 
-/* Hero Section Vibrante */
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 120px 0 60px;
@@ -214,15 +208,19 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(circle, rgba(238, 66, 102, 0.2) 0%, rgba(59, 206, 172, 0.08) 40%, transparent 75%);
+  background: radial-gradient(circle, rgba(255, 179, 0, 0.15) 0%, rgba(14, 167, 89, 0.05) 40%, transparent 70%);
   z-index: -1;
   pointer-events: none;
 }
 
+[data-theme="dark"] .hero::before {
+  background: radial-gradient(circle, rgba(0, 255, 102, 0.1) 0%, rgba(255, 193, 7, 0.05) 40%, transparent 70%);
+}
+
 .hero-kicker {
   display: inline-block;
-  background: var(--jungle-green);
-  color: var(--text-main);
+  background: var(--text-main);
+  color: var(--bg-base);
   font-weight: 800;
   text-transform: uppercase;
   font-size: 0.85rem;
@@ -230,7 +228,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: var(--radius-pill);
   margin-bottom: 28px;
   letter-spacing: 2px;
-  box-shadow: 0 6px 20px rgba(14, 173, 105, 0.4);
 }
 
 .hero-title {
@@ -241,13 +238,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   margin-bottom: 24px;
   line-height: 1.1;
   letter-spacing: -2px;
-}
-
-.hero-title span {
-  background: var(--gradient-main);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 .hero-subtitle {
@@ -273,14 +263,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: var(--radius-card);
   padding: 28px 40px;
   min-width: 240px;
-  box-shadow: 0 15px 35px rgba(26, 4, 34, 0.3);
+  box-shadow: 0 10px 30px rgba(42, 8, 69, 0.05);
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .metrica-card {
-  box-shadow: 0 10px 30px rgba(84, 13, 110, 0.08);
+[data-theme="dark"] .metrica-card {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .metrica-card::before {
@@ -290,11 +280,11 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   left: 0;
   width: 100%;
   height: 5px;
-  background: var(--accent-secondary);
+  background: var(--accent-primary);
 }
 
-.metrica-card:nth-child(2)::before { background: var(--accent-tertiary); }
-.metrica-card:nth-child(3)::before { background: var(--jungle-green); }
+.metrica-card:nth-child(2)::before { background: var(--accent-secondary); }
+.metrica-card:nth-child(3)::before { background: var(--text-main); }
 
 .metrica-card strong {
   display: block;
@@ -322,19 +312,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .busca-form {
   display: flex;
-  background: rgba(253, 252, 253, 0.06);
-  backdrop-filter: blur(12px);
+  background: var(--card-bg);
   border: 2px solid var(--border-light);
   border-radius: var(--radius-pill);
   padding: 10px;
+  box-shadow: 0 12px 30px rgba(42, 8, 69, 0.04);
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .busca-form { background: var(--card-bg); }
-
 .busca-form:focus-within {
-  border-color: var(--accent-secondary);
-  box-shadow: 0 0 30px rgba(255, 210, 63, 0.3);
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 30px var(--shadow-glow);
   transform: translateY(-3px);
 }
 
@@ -359,7 +347,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-busca {
-  background: var(--accent-primary);
+  background: var(--text-main);
   border: none;
   padding: 18px 36px;
   border-radius: var(--radius-pill);
@@ -367,14 +355,18 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.05rem;
-  color: var(--text-main);
+  color: var(--bg-base);
   transition: var(--transition-smooth);
 }
 
 .btn-busca:hover {
-  background: var(--accent-secondary);
+  background: var(--accent-primary);
   color: var(--bg-base);
-  box-shadow: 0 10px 25px rgba(255, 210, 63, 0.5);
+  box-shadow: 0 10px 25px var(--shadow-glow);
+}
+
+[data-theme="dark"] .btn-busca:hover {
+  color: #000000;
 }
 
 /* Menu de Filtros */
@@ -387,7 +379,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .bento-card {
-  background: rgba(253, 252, 253, 0.05);
+  background: var(--card-bg);
   border: 1px solid var(--border-light);
   padding: 14px 28px;
   border-radius: var(--radius-pill);
@@ -401,28 +393,30 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .bento-card { background: var(--card-bg); }
-
 .bento-card:hover {
-  border-color: var(--accent-tertiary);
+  border-color: var(--text-main);
   color: var(--text-main);
   transform: translateY(-3px);
 }
 
 .bento-card[aria-pressed="true"] {
-  background: var(--accent-tertiary);
-  border-color: var(--accent-tertiary);
+  background: var(--text-main);
+  border-color: var(--text-main);
   color: var(--bg-base);
 }
 
 .bento-card[aria-pressed="true"] strong {
+  color: var(--accent-primary);
+  opacity: 1;
+}
+
+[data-theme="dark"] .bento-card[aria-pressed="true"] strong {
   color: var(--bg-base);
-  opacity: 0.75;
 }
 
 /* Bloco de Monetização e Ads */
 .area-adsense {
-  background: var(--card-bg);
+  background: var(--accent-soft);
   border: 2px dashed var(--border-light);
   text-align: center;
   border-radius: var(--radius-card);
@@ -431,8 +425,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   justify-content: center;
   align-items: center;
   margin: 80px 0;
-  position: relative;
-  overflow: hidden;
 }
 
 .ads-label {
@@ -479,14 +471,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border: 1px solid var(--border-light);
   padding: 32px;
   border-radius: var(--radius-card);
-  border-left: 8px solid var(--accent-primary);
+  border-left: 8px solid var(--accent-secondary);
   transition: var(--transition-smooth);
 }
 
 .criterio-card:hover {
   transform: translateX(6px);
-  border-left-color: var(--accent-secondary);
-  box-shadow: 0 10px 30px rgba(26, 4, 34, 0.4);
+  border-left-color: var(--accent-primary);
 }
 
 .criterio-card strong {
@@ -508,7 +499,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   text-align: center;
   font-weight: 800;
   font-family: var(--font-display);
-  color: var(--accent-secondary);
+  color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 48px;
@@ -545,15 +536,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   flex-direction: column;
   position: relative;
   transition: var(--transition-smooth);
-  box-shadow: 0 15px 40px rgba(26, 4, 34, 0.3);
+  box-shadow: 0 10px 25px rgba(42, 8, 69, 0.03);
 }
-
-[data-theme="light"] .card { box-shadow: 0 15px 40px rgba(84, 13, 110, 0.06); }
 
 .card:hover {
   transform: translateY(-8px);
-  border-color: var(--accent-secondary);
-  box-shadow: 0 25px 50px rgba(26, 4, 34, 0.5);
+  border-color: var(--accent-primary);
+  box-shadow: 0 20px 45px rgba(42, 8, 69, 0.1);
+}
+
+[data-theme="dark"] .card:hover {
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
 
 .card-topo {
@@ -565,7 +558,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .card-emoji {
   font-size: 2rem;
-  background: rgba(253, 252, 253, 0.08);
+  background: var(--bg-base);
   width: 64px;
   height: 64px;
   display: flex;
@@ -575,19 +568,19 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border: 1px solid var(--border-light);
 }
 
-[data-theme="light"] .card-emoji { background: var(--bg-base); }
-
 .card-tag {
-  background: var(--jungle-green);
-  color: var(--text-main);
+  background: var(--accent-tertiary);
+  color: var(--bg-base);
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
   font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-family: var(--font-display);
 }
+
+[data-theme="dark"] .card-tag { color: var(--text-main); }
 
 .card h3 {
   font-family: var(--font-display);
@@ -600,13 +593,11 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .card-desc {
   font-weight: 700;
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   margin-bottom: 20px;
   font-size: 1.1rem;
   line-height: 1.5;
 }
-
-[data-theme="light"] .card-desc { color: var(--accent-primary); }
 
 .card-editorial {
   color: var(--text-muted);
@@ -637,12 +628,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-card-abrir:hover {
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-base);
 }
 
 .link-card-oficial {
-  color: var(--accent-tertiary);
+  color: var(--text-main);
   font-weight: 800;
   font-size: 1.1rem;
   text-decoration: none;
@@ -662,15 +654,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(26, 4, 34, 0.9);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(42, 8, 69, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 24px;
 }
+
+[data-theme="dark"] .modal-overlay { background: rgba(19, 3, 33, 0.9); }
 
 .modal-content {
   background: var(--card-bg);
@@ -682,14 +676,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
 }
 
 .btn-fechar {
   position: absolute;
   top: 28px;
   right: 28px;
-  background: rgba(253, 252, 253, 0.1);
+  background: var(--bg-base);
   border: 1px solid var(--border-light);
   width: 48px;
   height: 48px;
@@ -703,12 +697,11 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .btn-fechar { background: var(--bg-base); }
-
 .btn-fechar:hover {
   transform: rotate(90deg) scale(1.1);
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  background: var(--text-main);
+  border-color: var(--text-main);
+  color: var(--bg-base);
 }
 
 .modal-header-compacto {
@@ -722,7 +715,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .emoji-medio {
   font-size: 3.2rem;
-  background: rgba(253, 252, 253, 0.06);
+  background: var(--bg-base);
   padding: 18px;
   border-radius: 20px;
   border: 1px solid var(--border-light);
@@ -737,14 +730,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .dor-box {
-  background: rgba(253, 252, 253, 0.05);
+  background: var(--accent-soft);
   padding: 28px;
   border-radius: 20px;
-  border-left: 8px solid var(--accent-tertiary);
+  border-left: 8px solid var(--accent-primary);
   margin: 36px 0;
 }
-
-[data-theme="light"] .dor-box { background: var(--bg-base); }
 
 .dor-box strong {
   color: var(--text-main);
@@ -780,25 +771,21 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .detalhes-editoriais div {
-  background: rgba(253, 252, 253, 0.03);
+  background: var(--bg-base);
   padding: 28px;
   border-radius: 20px;
   border: 1px solid var(--border-light);
 }
 
-[data-theme="light"] .detalhes-editoriais div { background: var(--bg-base); }
-
 .detalhes-editoriais dt {
   font-family: var(--font-display);
   font-weight: 800;
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   margin-bottom: 8px;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
-
-[data-theme="light"] .detalhes-editoriais dt { color: var(--accent-primary); }
 
 .detalhes-editoriais dd {
   font-weight: 500;
@@ -808,19 +795,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .acoes-ferramenta {
-  background: rgba(253, 252, 253, 0.03);
+  background: var(--bg-base);
   padding: 36px;
   border-radius: 24px;
   border: 1px solid var(--border-light);
 }
 
-[data-theme="light"] .acoes-ferramenta { background: var(--bg-base); }
-
 .btn-primario {
   display: block;
   text-align: center;
-  background: var(--accent-primary);
-  color: var(--text-main);
+  background: var(--text-main);
+  color: var(--bg-base);
   padding: 22px;
   border-radius: 16px;
   text-decoration: none;
@@ -833,9 +818,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .btn-primario:hover {
   transform: translateY(-3px);
-  background: var(--accent-secondary);
+  background: var(--accent-primary);
   color: var(--bg-base);
-  box-shadow: 0 15px 40px rgba(255, 210, 63, 0.5);
+}
+
+[data-theme="dark"] .btn-primario:hover {
+  color: #000000;
 }
 
 .share-buttons {
@@ -853,7 +841,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-share {
-  background: rgba(253, 252, 253, 0.05);
+  background: var(--card-bg);
   color: var(--text-main);
   border: 2px solid var(--border-light);
   padding: 18px;
@@ -866,16 +854,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .btn-share { background: var(--bg-base); }
-
 .btn-share:hover {
-  border-color: var(--accent-tertiary);
-  background: var(--accent-tertiary);
+  border-color: var(--text-main);
+  background: var(--text-main);
   color: var(--bg-base);
 }
 
 /* =========================================
-   NOVO RODAPÉ INSTITUCIONAL PROFISSIONAL
+   RODAPÉ INSTITUCIONAL PROFISSIONAL
 ========================================= */
 .rodape-site {
   background: var(--card-bg);
@@ -917,7 +903,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .projetos-parceiros h3 {
   font-family: var(--font-display);
-  color: var(--accent-secondary);
+  color: var(--text-main);
   font-size: 1.3rem;
   margin-bottom: 32px;
 }
@@ -933,7 +919,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .card-parceiro {
   display: flex;
   flex-direction: column;
-  background: rgba(253, 252, 253, 0.04);
+  background: var(--bg-base);
   border: 1px solid var(--border-light);
   padding: 24px;
   border-radius: 16px;
@@ -941,12 +927,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transition: var(--transition-smooth);
 }
 
-[data-theme="light"] .card-parceiro { background: var(--bg-base); }
-
 .card-parceiro:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
-  background: rgba(253, 252, 253, 0.08);
+  box-shadow: 0 10px 20px rgba(42, 8, 69, 0.05);
+}
+
+[data-theme="dark"] .card-parceiro:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
 .card-em-breve {
@@ -957,7 +945,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .card-em-breve:hover {
   transform: none;
   border-color: var(--border-light);
-  background: rgba(253, 252, 253, 0.04);
+  box-shadow: none;
 }
 
 .parceiro-tag {
@@ -965,7 +953,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
-  color: var(--accent-tertiary);
+  color: var(--accent-secondary);
   margin-bottom: 12px;
   letter-spacing: 1px;
 }
@@ -1017,7 +1005,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .links-rodape a:hover {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 /* Responsividade Aprimorada */
@@ -1039,7 +1027,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .detalhes-editoriais { grid-template-columns: 1fr; }
   .modal-content { padding: 32px 24px; }
   .modal-header-compacto { flex-direction: column; text-align: center; }
-  
   .sobre-portal-rodape { text-align: center; }
   .links-rodape { gap: 16px; flex-direction: column; }
 }
