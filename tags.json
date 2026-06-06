@@ -1,0 +1,20 @@
+{
+  "Sem Certificado": {
+    "label": "Sem Certificado",
+    "color": "var(--accent-primary)",
+    "bg": "rgba(235, 103, 46, 0.12)",
+    "border": "rgba(235, 103, 46, 0.3)"
+  },
+  "Acesso Livre": {
+    "label": "Acesso Livre",
+    "color": "var(--text-main)",
+    "bg": "rgba(38, 66, 43, 0.1)",
+    "border": "rgba(38, 66, 43, 0.2)"
+  },
+  "Modo Ouvinte": {
+    "label": "Modo Ouvinte",
+    "color": "var(--text-muted)",
+    "bg": "rgba(93, 55, 42, 0.1)",
+    "border": "rgba(93, 55, 42, 0.25)"
+  }
+}

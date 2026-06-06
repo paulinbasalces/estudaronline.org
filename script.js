@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     let baseDeDados = [];
+    let configTags = {};
     let categoriaAtiva = 'Todas';
     const htmlElement = document.documentElement;
 
@@ -19,52 +20,41 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('btn-fonte-mais').addEventListener('click', () => { if(fontScale < 130) { fontScale += 10; atualizarFonte(); } });
     document.getElementById('btn-fonte-menos').addEventListener('click', () => { if(fontScale > 90) { fontScale -= 10; atualizarFonte(); } });
 
-    /* Fetch Simultâneo: Curadoria e Parceiros */
-    carregarDados();
-    carregarParceiros();
+    /* Fetch Simultâneo: Curadoria, Parceiros e Configuração de Tags */
+    carregarInfraestrutura();
 
-    function carregarDados() {
-        fetch('dados.json')
-            .then(res => res.json())
-            .then(data => {
-                baseDeDados = data || [];
-                document.getElementById('total-ferramentas').textContent = baseDeDados.length;
-                document.getElementById('total-categorias').textContent = new Set(baseDeDados.map(i => i.categoria)).size;
-                renderizarFiltros();
-                renderizarInterface();
-                abrirModalDaUrl();
-            })
-            .catch(err => {
-                console.error("Erro ao carregar dados:", err);
-                document.getElementById('lista-ferramentas').innerHTML = '<p style="text-align:center; color: var(--text-muted);">Inconsistência na conexão. Verifique o acesso à rede.</p>';
-            });
+    function carregarInfraestrutura() {
+        Promise.all([
+            fetch('dados.json').then(res => res.json()).catch(() => []),
+            fetch('parceiros.json').then(res => res.json()).catch(() => []),
+            fetch('tags.json').then(res => res.json()).catch(() => ({}))
+        ]).then(([dados, parceiros, tags]) => {
+            baseDeDados = dados;
+            configTags = tags;
+            
+            document.getElementById('total-ferramentas').textContent = baseDeDados.length;
+            document.getElementById('total-categorias').textContent = new Set(baseDeDados.map(i => i.categoria)).size;
+            
+            renderizarParceiros(parceiros);
+            renderizarFiltros();
+            renderizarInterface();
+            abrirModalDaUrl();
+        });
     }
 
-    function carregarParceiros() {
-        fetch('parceiros.json')
-            .then(res => res.json())
-            .then(data => {
-                const container = document.getElementById('grid-parceiros-container');
-                if (!container || !data.length) return;
-                
-                let htmlParceiros = data.map(p => `
-                    <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="card-parceiro">
-                        <span class="parceiro-tag">${p.categoria}</span>
-                        <strong>${p.nome}</strong>
-                        <small>${p.descricao}</small>
-                    </a>
-                `).join('');
+    function renderizarParceiros(data) {
+        const container = document.getElementById('grid-parceiros-container');
+        if (!container || !data.length) return;
+        
+        let htmlParceiros = data.map(p => `
+            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="card-parceiro">
+                <span class="parceiro-tag">${p.categoria}</span>
+                <strong>${p.nome}</strong>
+                <small>${p.descricao}</small>
+            </a>
+        `).join('');
 
-                htmlParceiros += `
-                    <a href="#" class="card-parceiro card-em-breve" aria-disabled="true">
-                        <span class="parceiro-tag">Expansão</span>
-                        <strong>Em Breve</strong>
-                        <small>Novos projetos em desenvolvimento...</small>
-                    </a>`;
-                
-                container.innerHTML = htmlParceiros;
-            })
-            .catch(err => console.error("Aviso: Parceiros não carregados.", err));
+        container.innerHTML = htmlParceiros;
     }
 
     /* Motor de Busca e Menu Bento */
@@ -118,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById('lista-ferramentas');
         
         if (!filtradas.length) { 
-            container.innerHTML = '<p style="text-align:center; padding: 40px; color: var(--text-muted);">Nenhum sistema corresponde aos critérios informados.</p>'; 
+            container.innerHTML = '<p style="text-align:center; padding: 40px; color: var(--text-muted); font-family: var(--font-display);">Nenhum sistema corresponde aos critérios informados.</p>'; 
             return; 
         }
 
@@ -128,15 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const cards = grupos[cat].map(item => {
                 
                 let tituloLimpo = item.nome;
-                let alertaTagHtml = '';
-                const regexTag = /\[(.*?)\]/;
-                const matchRegex = tituloLimpo.match(regexTag);
+                let htmlTags = '';
+                const regexTag = /\[(.*?)\]/g;
                 
-                if (matchRegex) {
-                    const tagTexto = matchRegex[1];
-                    tituloLimpo = tituloLimpo.replace(regexTag, '').trim();
-                    alertaTagHtml = `<div class="card-alert-tag">${tagTexto}</div>`;
+                let match;
+                while ((match = regexTag.exec(item.nome)) !== null) {
+                    const nomeTag = match[1];
+                    tituloLimpo = tituloLimpo.replace(match[0], '').trim();
+                    
+                    if(configTags && configTags[nomeTag]) {
+                        const styleConfig = `color: ${configTags[nomeTag].color}; background: ${configTags[nomeTag].bg}; border-color: ${configTags[nomeTag].border};`;
+                        htmlTags += `<span class="card-alert-tag" style="${styleConfig}">${configTags[nomeTag].label}</span>`;
+                    } else {
+                        htmlTags += `<span class="card-alert-tag">${nomeTag}</span>`;
+                    }
                 }
+
+                const renderTagsArea = htmlTags ? `<div class="tags-container">${htmlTags}</div>` : `<div class="tags-container" style="min-height: 28px;"></div>`;
 
                 return `
                 <article class="card">
@@ -147,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <h3>${tituloLimpo}</h3>
                     <p class="card-desc">${item.dor_resolvida}</p>
                     <p class="card-editorial">${item.descricao}</p>
-                    ${alertaTagHtml}
+                    ${renderTagsArea}
                     <div class="card-footer">
                         <button class="btn-card-abrir" onclick="abrirModal('${item.id}')" aria-label="Analisar ${tituloLimpo}">Ver Detalhes</button>
                         <a class="link-card-oficial" href="${item.url}" target="_blank" rel="noopener noreferrer">Acessar Oficial ➔</a>
@@ -165,11 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = baseDeDados.find(i => String(i.id) === String(id));
         if(!item) return;
         
-        let tituloLimpo = item.nome;
-        const regexTag = /\[(.*?)\]/;
-        if (regexTag.test(tituloLimpo)) {
-            tituloLimpo = tituloLimpo.replace(regexTag, '').trim();
-        }
+        let tituloLimpo = item.nome.replace(/\[(.*?)\]/g, '').trim();
 
         document.getElementById('artigo-emoji').textContent = item.emoji;
         document.getElementById('artigo-titulo').textContent = tituloLimpo;
@@ -205,7 +199,6 @@ document.addEventListener('DOMContentLoaded', () => {
         atualizarUrlParam('modal', null);
     }
 
-    /* Utilitários de Compartilhamento Nativo e URL */
     function atualizarUrlParam(key, value) {
         const url = new URL(window.location.href);
         if (value) url.searchParams.set(key, value); else url.searchParams.delete(key);
