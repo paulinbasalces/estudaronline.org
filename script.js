@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </a>
                 `).join('');
 
-                // Adiciona o card estático de expansão ao final
                 htmlParceiros += `
                     <a href="#" class="card-parceiro card-em-breve" aria-disabled="true">
                         <span class="parceiro-tag">Expansão</span>
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const cats = ['Todas', ...new Set(baseDeDados.map(i => i.categoria))];
         const container = document.getElementById('bento-menu');
         
-        // Mapeamento automático do primeiro emoji encontrado por categoria
         const mapaEmojis = {};
         cats.forEach(cat => {
             const itemMatch = baseDeDados.find(i => i.categoria === cat);
@@ -129,7 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
         container.innerHTML = Object.keys(grupos).map((cat, idx, arr) => {
             const cards = grupos[cat].map(item => {
                 
-                // Análise Estratégica: Extração de Tag com Regex
                 let tituloLimpo = item.nome;
                 let alertaTagHtml = '';
                 const regexTag = /\[(.*?)\]/;
@@ -168,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const item = baseDeDados.find(i => String(i.id) === String(id));
         if(!item) return;
         
-        // Aplica a mesma lógica de limpeza para o Modal
         let tituloLimpo = item.nome;
         const regexTag = /\[(.*?)\]/;
         if (regexTag.test(tituloLimpo)) {

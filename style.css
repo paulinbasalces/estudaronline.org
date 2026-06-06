@@ -1,27 +1,32 @@
 /* ========================================================================
-ESTUDARONLINE.ORG — DESIGN SYSTEM "SOLARPUNK URBANO"
-Diretrizes Visuais: Contraste absoluto, fuga do branco/preto puros. 
-Vibração através da paleta Deep Purple, Amber, Off-White e Neon Green.
+ESTUDARONLINE.ORG — DESIGN SYSTEM "RETRO ORGÂNICO"
+Diretrizes Visuais: Fuga de brancos e pretos puros.
+Paleta: Beeswax, Grenadine, Darlington, Cafe Latte.
 ========================================================================
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* PALETA LIGHT (Modo Claro Vibrante e Quente) */
-  --bg-base: #F4F1EA; /* Off-White cru, reduz a refração de luz */
-  --card-bg: #FCFAF8; /* Quase branco, mas aquecido */
-  --text-main: #2A0845; /* Deep Purple, substitui o preto com mais personalidade */
-  --text-muted: #6A4B82; /* Deep Purple dessaturado */
+  /* CORES BASE DA IMAGEM */
+  --beeswax: #EAB05C;
+  --grenadine: #D95122;
+  --darlington: #B6CFB9;
+  --cafe-latte: #896645;
   
-  /* Cores de Ação */
-  --accent-primary: #FFB300; /* Amber: Chamadas principais e botões */
-  --accent-secondary: #0EA759; /* Neon Green adaptado para alto contraste no claro */
-  --accent-tertiary: #4A1578; /* Deep Purple intermediário para tags */
-  --accent-soft: #FFF2D1; /* Fundo suave do Amber */
+  /* PALETA LIGHT (Modo Claro Orgânico e Legível) */
+  --bg-base: #FCFAF6;
+  --card-bg: #FFFFFF;
+  --text-main: #2A1F1A;
+  --text-muted: var(--cafe-latte);
   
-  --border-light: rgba(42, 8, 69, 0.12);
-  --shadow-glow: rgba(255, 179, 0, 0.25);
+  --accent-primary: var(--grenadine);
+  --accent-secondary: var(--beeswax);
+  --accent-tertiary: var(--darlington);
+  --accent-soft: rgba(234, 176, 92, 0.15); /* Beeswax Soft */
+  
+  --border-light: rgba(137, 102, 69, 0.2); /* Cafe Latte alpha */
+  --shadow-glow: rgba(217, 81, 34, 0.2); /* Grenadine alpha */
   
   /* Sistema Estrutural */
   --font-global: 'Plus Jakarta Sans', sans-serif;
@@ -32,20 +37,19 @@ Vibração através da paleta Deep Purple, Amber, Off-White e Neon Green.
 }
 
 [data-theme="dark"] {
-  /* PALETA DARK (Modo Escuro Imersivo e Focado) */
-  --bg-base: #130321; /* Deep Purple quase abissal */
-  --card-bg: #21093A; /* Elevação do Deep Purple para os cards */
-  --text-main: #F4F1EA; /* Off-White claro e nítido */
-  --text-muted: #A895BC; /* Lilás acinzentado suave */
+  /* PALETA DARK (Modo Escuro Quente e Contrastante) */
+  --bg-base: #1C1411; 
+  --card-bg: #29201C;
+  --text-main: #F4EFEA;
+  --text-muted: var(--darlington);
   
-  /* Cores de Ação (Inversão de hierarquia para brilho no escuro) */
-  --accent-primary: #00FF66; /* Neon Green puro assumindo a liderança de clique */
-  --accent-secondary: #FFC107; /* Amber auxiliando nos detalhes */
-  --accent-tertiary: #FF007F; /* Um toque magenta cyber para tags especiais */
-  --accent-soft: #301050; /* Base profunda roxa para caixas de ênfase */
+  --accent-primary: var(--beeswax);
+  --accent-secondary: var(--grenadine);
+  --accent-tertiary: var(--cafe-latte);
+  --accent-soft: rgba(182, 207, 185, 0.1); /* Darlington Soft */
   
-  --border-light: rgba(244, 241, 234, 0.08);
-  --shadow-glow: rgba(0, 255, 102, 0.15);
+  --border-light: rgba(182, 207, 185, 0.15);
+  --shadow-glow: rgba(234, 176, 92, 0.2);
 }
 
 /* Reset Geral Avançado */
@@ -79,7 +83,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 6px;
-  background: linear-gradient(90deg, var(--text-main), var(--accent-primary), var(--accent-secondary));
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary), var(--accent-tertiary));
   z-index: 9999;
 }
 
@@ -133,7 +137,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .nav-bar {
-  background: rgba(252, 250, 248, 0.8);
+  background: rgba(252, 250, 246, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-light);
@@ -142,13 +146,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 12px 35px rgba(42, 8, 69, 0.08);
+  box-shadow: 0 12px 35px rgba(42, 31, 26, 0.06);
   transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .nav-bar {
-  background: rgba(33, 9, 58, 0.7);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  background: rgba(41, 32, 28, 0.85);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .logotipo {
@@ -161,7 +165,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .logotipo span {
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
   font-weight: 500;
 }
 
@@ -208,13 +212,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(circle, rgba(255, 179, 0, 0.15) 0%, rgba(14, 167, 89, 0.05) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(217, 81, 34, 0.1) 0%, rgba(234, 176, 92, 0.05) 40%, transparent 70%);
   z-index: -1;
   pointer-events: none;
-}
-
-[data-theme="dark"] .hero::before {
-  background: radial-gradient(circle, rgba(0, 255, 102, 0.1) 0%, rgba(255, 193, 7, 0.05) 40%, transparent 70%);
 }
 
 .hero-kicker {
@@ -263,14 +263,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: var(--radius-card);
   padding: 28px 40px;
   min-width: 240px;
-  box-shadow: 0 10px 30px rgba(42, 8, 69, 0.05);
+  box-shadow: 0 10px 30px rgba(42, 31, 26, 0.04);
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .metrica-card {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
 }
 
 .metrica-card::before {
@@ -284,7 +284,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .metrica-card:nth-child(2)::before { background: var(--accent-secondary); }
-.metrica-card:nth-child(3)::before { background: var(--text-main); }
+.metrica-card:nth-child(3)::before { background: var(--accent-tertiary); }
 
 .metrica-card strong {
   display: block;
@@ -316,7 +316,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border: 2px solid var(--border-light);
   border-radius: var(--radius-pill);
   padding: 10px;
-  box-shadow: 0 12px 30px rgba(42, 8, 69, 0.04);
+  box-shadow: 0 12px 30px rgba(42, 31, 26, 0.04);
   transition: var(--transition-smooth);
 }
 
@@ -347,7 +347,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .btn-busca {
-  background: var(--text-main);
+  background: var(--accent-primary);
   border: none;
   padding: 18px 36px;
   border-radius: var(--radius-pill);
@@ -355,21 +355,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.05rem;
-  color: var(--bg-base);
+  color: #FFFFFF;
   transition: var(--transition-smooth);
 }
 
 .btn-busca:hover {
-  background: var(--accent-primary);
+  background: var(--text-main);
   color: var(--bg-base);
   box-shadow: 0 10px 25px var(--shadow-glow);
 }
 
-[data-theme="dark"] .btn-busca:hover {
-  color: #000000;
-}
-
-/* Menu de Filtros */
+/* Menu de Filtros e Emojis Bento */
 .bento-grid-container {
   display: flex;
   flex-wrap: wrap;
@@ -405,16 +401,18 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   color: var(--bg-base);
 }
 
-.bento-card[aria-pressed="true"] strong {
+.bento-card[aria-pressed="true"] strong,
+.bento-card[aria-pressed="true"] .bento-card-emoji {
   color: var(--accent-primary);
   opacity: 1;
 }
 
-[data-theme="dark"] .bento-card[aria-pressed="true"] strong {
-  color: var(--bg-base);
+.bento-card-emoji {
+  font-size: 1.2rem;
+  margin-right: 4px;
 }
 
-/* Bloco de Monetização e Ads */
+/* Bloco de Monetização */
 .area-adsense {
   background: var(--accent-soft);
   border: 2px dashed var(--border-light);
@@ -536,17 +534,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   flex-direction: column;
   position: relative;
   transition: var(--transition-smooth);
-  box-shadow: 0 10px 25px rgba(42, 8, 69, 0.03);
+  box-shadow: 0 10px 25px rgba(42, 31, 26, 0.03);
 }
 
 .card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 0 20px 45px rgba(42, 8, 69, 0.1);
+  box-shadow: 0 20px 45px rgba(42, 31, 26, 0.1);
 }
 
 [data-theme="dark"] .card:hover {
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
 }
 
 .card-topo {
@@ -570,7 +568,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .card-tag {
   background: var(--accent-tertiary);
-  color: var(--bg-base);
+  color: var(--text-main);
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
@@ -579,8 +577,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   letter-spacing: 1px;
   font-family: var(--font-display);
 }
-
-[data-theme="dark"] .card-tag { color: var(--text-main); }
 
 .card h3 {
   font-family: var(--font-display);
@@ -605,6 +601,23 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   margin-bottom: 32px;
   font-size: 1.05rem;
   line-height: 1.6;
+}
+
+/* Badges de Alerta (Sem Certificado) */
+.card-alert-tag {
+  display: inline-block;
+  background: rgba(217, 81, 34, 0.1);
+  color: var(--accent-primary);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid rgba(217, 81, 34, 0.3);
+  margin-top: auto;
+  margin-bottom: 24px;
+  align-self: flex-start;
 }
 
 .card-footer {
@@ -647,14 +660,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .link-card-oficial:hover {
   letter-spacing: 1px;
-  color: var(--accent-secondary);
+  color: var(--accent-primary);
 }
 
 /* Sistema Modal Imersivo */
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(42, 8, 69, 0.85);
+  background: rgba(28, 20, 17, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
@@ -663,8 +676,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   align-items: center;
   padding: 24px;
 }
-
-[data-theme="dark"] .modal-overlay { background: rgba(19, 3, 33, 0.9); }
 
 .modal-content {
   background: var(--card-bg);
@@ -819,11 +830,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .btn-primario:hover {
   transform: translateY(-3px);
   background: var(--accent-primary);
-  color: var(--bg-base);
-}
-
-[data-theme="dark"] .btn-primario:hover {
-  color: #000000;
+  color: #FFFFFF;
 }
 
 .share-buttons {
@@ -932,7 +939,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .card-parceiro:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(42, 8, 69, 0.05);
+  box-shadow: 0 10px 20px rgba(42, 31, 26, 0.05);
 }
 
 [data-theme="dark"] .card-parceiro:hover {
@@ -944,6 +951,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   cursor: default;
   border-style: dashed;
 }
+
 .card-em-breve:hover {
   transform: none;
   border-color: var(--border-light);
@@ -1008,36 +1016,6 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .links-rodape a:hover {
   color: var(--accent-primary);
-}
-
-/* =========================================
-   BADGES DE ALERTA E EMOJIS BENTO
-========================================= */
-.bento-card-emoji {
-  font-size: 1.2rem;
-  margin-right: 4px;
-}
-
-.card-alert-tag {
-  display: inline-block;
-  background: rgba(255, 0, 102, 0.1);
-  color: var(--accent-primary);
-  padding: 6px 12px;
-  border-radius: 8px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 1px solid rgba(255, 0, 102, 0.25);
-  margin-top: auto;
-  margin-bottom: 24px;
-  align-self: flex-start;
-}
-
-[data-theme="light"] .card-alert-tag {
-  background: rgba(136, 53, 86, 0.08);
-  color: var(--text-muted);
-  border-color: rgba(136, 53, 86, 0.2);
 }
 
 /* Responsividade Aprimorada */
