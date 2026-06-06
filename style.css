@@ -1,32 +1,27 @@
 /* ========================================================================
-ESTUDARONLINE.ORG — DESIGN SYSTEM "RETRO ORGÂNICO"
-Diretrizes Visuais: Fuga de brancos e pretos puros.
-Paleta: Beeswax, Grenadine, Darlington, Cafe Latte.
+ESTUDARONLINE.ORG — DESIGN SYSTEM "RETRO ORGÂNICO VIBRANTE"
+Diretrizes Visuais: Fuga total de brancos e pretos puros.
+Paleta Base: Beeswax, Grenadine, Darlington, Cafe Latte.
 ========================================================================
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
 
 :root {
-  /* CORES BASE DA IMAGEM */
-  --beeswax: #EAB05C;
-  --grenadine: #D95122;
-  --darlington: #B6CFB9;
-  --cafe-latte: #896645;
+  /* PALETA LIGHT (Modo Claro Inovador - Fundo com Vida) */
+  --bg-base: #D4E0D6; /* Mint suave (Darlington muito claro), sem ser branco */
+  --card-bg: #B6CFB9; /* Darlington puro nos cards */
+  --text-main: #2A1D16; /* Marrom profundo (Espresso), sem preto */
+  --text-muted: #664A30; /* Cafe Latte escurecido para legibilidade */
   
-  /* PALETA LIGHT (Modo Claro Orgânico e Legível) */
-  --bg-base: #FCFAF6;
-  --card-bg: #FFFFFF;
-  --text-main: #2A1F1A;
-  --text-muted: var(--cafe-latte);
+  --accent-primary: #D95122; /* Grenadine (Botões de ação principal) */
+  --accent-secondary: #EAB05C; /* Beeswax (Destaques e Hovers) */
+  --accent-tertiary: #896645; /* Cafe Latte (Tags estruturais) */
+  --accent-soft: rgba(234, 176, 92, 0.25);
   
-  --accent-primary: var(--grenadine);
-  --accent-secondary: var(--beeswax);
-  --accent-tertiary: var(--darlington);
-  --accent-soft: rgba(234, 176, 92, 0.15); /* Beeswax Soft */
-  
-  --border-light: rgba(137, 102, 69, 0.2); /* Cafe Latte alpha */
-  --shadow-glow: rgba(217, 81, 34, 0.2); /* Grenadine alpha */
+  --text-btn: #F4EBE1; /* Creme quente para botões, sem branco absoluto */
+  --border-light: rgba(42, 29, 22, 0.12);
+  --shadow-glow: rgba(217, 81, 34, 0.25);
   
   /* Sistema Estrutural */
   --font-global: 'Plus Jakarta Sans', sans-serif;
@@ -37,18 +32,19 @@ Paleta: Beeswax, Grenadine, Darlington, Cafe Latte.
 }
 
 [data-theme="dark"] {
-  /* PALETA DARK (Modo Escuro Quente e Contrastante) */
-  --bg-base: #1C1411; 
-  --card-bg: #29201C;
-  --text-main: #F4EFEA;
-  --text-muted: var(--darlington);
+  /* PALETA DARK (Modo Escuro Quente - Fundo Abissal Orgânico) */
+  --bg-base: #18110D; /* Espresso abissal, sem preto puro */
+  --card-bg: #2B1E17; /* Espresso claro nos cards */
+  --text-main: #EFE6D8; /* Creme claro vibrante, sem branco puro */
+  --text-muted: #B6CFB9; /* Darlington para textos secundários (contraste suave) */
   
-  --accent-primary: var(--beeswax);
-  --accent-secondary: var(--grenadine);
-  --accent-tertiary: var(--cafe-latte);
-  --accent-soft: rgba(182, 207, 185, 0.1); /* Darlington Soft */
+  --accent-primary: #EAB05C; /* Beeswax assumindo a primária para brilhar no escuro */
+  --accent-secondary: #D95122; /* Grenadine como apoio */
+  --accent-tertiary: #896645; /* Cafe Latte */
+  --accent-soft: rgba(182, 207, 185, 0.15);
   
-  --border-light: rgba(182, 207, 185, 0.15);
+  --text-btn: #18110D; /* Texto escuro em botões claros para manter leitura */
+  --border-light: rgba(239, 230, 216, 0.1);
   --shadow-glow: rgba(234, 176, 92, 0.2);
 }
 
@@ -137,7 +133,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 
 .nav-bar {
-  background: rgba(252, 250, 246, 0.85);
+  background: rgba(212, 224, 214, 0.85); /* Derivado do fundo claro */
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-light);
@@ -146,12 +142,12 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 12px 35px rgba(42, 31, 26, 0.06);
+  box-shadow: 0 12px 35px rgba(42, 29, 22, 0.08);
   transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .nav-bar {
-  background: rgba(41, 32, 28, 0.85);
+  background: rgba(24, 17, 13, 0.85); /* Derivado do fundo escuro */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
@@ -212,9 +208,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   transform: translateX(-50%);
   width: 900px;
   height: 600px;
-  background: radial-gradient(circle, rgba(217, 81, 34, 0.1) 0%, rgba(234, 176, 92, 0.05) 40%, transparent 70%);
+  background: radial-gradient(circle, rgba(217, 81, 34, 0.15) 0%, rgba(234, 176, 92, 0.08) 40%, transparent 70%);
   z-index: -1;
   pointer-events: none;
+}
+
+[data-theme="dark"] .hero::before {
+  background: radial-gradient(circle, rgba(234, 176, 92, 0.1) 0%, rgba(217, 81, 34, 0.05) 40%, transparent 70%);
 }
 
 .hero-kicker {
@@ -263,14 +263,14 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border-radius: var(--radius-card);
   padding: 28px 40px;
   min-width: 240px;
-  box-shadow: 0 10px 30px rgba(42, 31, 26, 0.04);
+  box-shadow: 0 10px 30px rgba(42, 29, 22, 0.06);
   position: relative;
   overflow: hidden;
   transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .metrica-card {
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
 .metrica-card::before {
@@ -316,7 +316,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   border: 2px solid var(--border-light);
   border-radius: var(--radius-pill);
   padding: 10px;
-  box-shadow: 0 12px 30px rgba(42, 31, 26, 0.04);
+  box-shadow: 0 12px 30px rgba(42, 29, 22, 0.05);
   transition: var(--transition-smooth);
 }
 
@@ -355,13 +355,13 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.05rem;
-  color: #FFFFFF;
+  color: var(--text-btn);
   transition: var(--transition-smooth);
 }
 
 .btn-busca:hover {
-  background: var(--text-main);
-  color: var(--bg-base);
+  background: var(--accent-secondary);
+  color: var(--text-main);
   box-shadow: 0 10px 25px var(--shadow-glow);
 }
 
@@ -534,17 +534,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   flex-direction: column;
   position: relative;
   transition: var(--transition-smooth);
-  box-shadow: 0 10px 25px rgba(42, 31, 26, 0.03);
+  box-shadow: 0 10px 25px rgba(42, 29, 22, 0.05);
 }
 
 .card:hover {
   transform: translateY(-8px);
   border-color: var(--accent-primary);
-  box-shadow: 0 20px 45px rgba(42, 31, 26, 0.1);
+  box-shadow: 0 20px 45px rgba(42, 29, 22, 0.15);
 }
 
 [data-theme="dark"] .card:hover {
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
 
 .card-topo {
@@ -568,7 +568,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .card-tag {
   background: var(--accent-tertiary);
-  color: var(--text-main);
+  color: var(--bg-base);
   padding: 8px 16px;
   border-radius: var(--radius-pill);
   font-size: 0.8rem;
@@ -577,6 +577,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   letter-spacing: 1px;
   font-family: var(--font-display);
 }
+
+[data-theme="dark"] .card-tag { color: var(--text-main); }
 
 .card h3 {
   font-family: var(--font-display);
@@ -606,7 +608,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 /* Badges de Alerta (Sem Certificado) */
 .card-alert-tag {
   display: inline-block;
-  background: rgba(217, 81, 34, 0.1);
+  background: var(--accent-soft);
   color: var(--accent-primary);
   padding: 6px 12px;
   border-radius: 8px;
@@ -614,7 +616,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border: 1px solid rgba(217, 81, 34, 0.3);
+  border: 1px solid var(--border-light);
   margin-top: auto;
   margin-bottom: 24px;
   align-self: flex-start;
@@ -667,7 +669,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(28, 20, 17, 0.85);
+  background: rgba(42, 29, 22, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 2000;
@@ -676,6 +678,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   align-items: center;
   padding: 24px;
 }
+
+[data-theme="dark"] .modal-overlay { background: rgba(24, 17, 13, 0.9); }
 
 .modal-content {
   background: var(--card-bg);
@@ -815,8 +819,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .btn-primario {
   display: block;
   text-align: center;
-  background: var(--text-main);
-  color: var(--bg-base);
+  background: var(--accent-primary);
+  color: var(--text-btn);
   padding: 22px;
   border-radius: 16px;
   text-decoration: none;
@@ -829,8 +833,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 
 .btn-primario:hover {
   transform: translateY(-3px);
-  background: var(--accent-primary);
-  color: #FFFFFF;
+  background: var(--accent-secondary);
+  color: var(--text-main);
 }
 
 .share-buttons {
@@ -939,7 +943,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .card-parceiro:hover {
   border-color: var(--accent-primary);
   transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(42, 31, 26, 0.05);
+  box-shadow: 0 10px 20px rgba(42, 29, 22, 0.05);
 }
 
 [data-theme="dark"] .card-parceiro:hover {
