@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!container || !data.length) return;
         
         let htmlParceiros = data.map(p => `
-            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="card-parceiro">
+            <a href="${p.url}" target="_blank" rel="noopener noreferrer" class="card-parceiro glass-effect">
                 <span class="parceiro-tag">${p.categoria}</span>
                 <strong>${p.nome}</strong>
                 <small>${p.descricao}</small>
@@ -60,9 +60,30 @@ document.addEventListener('DOMContentLoaded', () => {
     /* Motor de Busca e Menu Bento */
     const campoBusca = document.getElementById('campo-busca');
     const btnLimpar = document.getElementById('btn-limpar-busca');
+    const btnGoogleBusca = document.getElementById('btn-google-busca');
 
     campoBusca.addEventListener('input', () => { atualizarUrlParam('q', campoBusca.value); renderizarInterface(); });
-    btnLimpar.addEventListener('click', () => { campoBusca.value = ''; categoriaAtiva = 'Todas'; atualizarUrlParam('q', null); renderizarFiltros(); renderizarInterface(); });
+    
+    btnLimpar.addEventListener('click', () => { 
+        campoBusca.value = ''; 
+        categoriaAtiva = 'Todas'; 
+        atualizarUrlParam('q', null); 
+        renderizarFiltros(); 
+        renderizarInterface(); 
+    });
+
+    if (btnGoogleBusca) {
+        btnGoogleBusca.addEventListener('click', () => {
+            const query = campoBusca.value.trim();
+            if (query) {
+                // Abre o Google em nova aba buscando pelo termo + intenção de curso gratuito
+                const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(query + ' cursos gratuitos online')}`;
+                window.open(searchUrl, '_blank');
+            } else {
+                campoBusca.focus();
+            }
+        });
+    }
 
     function renderizarFiltros() {
         const cats = ['Todas', ...new Set(baseDeDados.map(i => i.categoria))];
@@ -80,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const emojiDisplay = cat === 'Todas' ? '🎯' : mapaEmojis[cat];
             
             return `
-                <button type="button" class="bento-card" data-cat="${cat}" aria-pressed="${ativo}">
+                <button type="button" class="bento-card glass-btn" data-cat="${cat}" aria-pressed="${ativo}">
                     <span class="bento-card-emoji" aria-hidden="true">${emojiDisplay}</span>
                     <span>${cat}</span> 
                     <strong>(${total})</strong>
@@ -104,11 +125,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return textMatch && catMatch;
         });
 
-        document.getElementById('status-resultados').textContent = `${filtradas.length} recursos localizados.`;
+        document.getElementById('status-resultados').textContent = `${filtradas.length} recursos locais encontrados. Tente a "Busca no Google" para resultados externos.`;
         const container = document.getElementById('lista-ferramentas');
         
         if (!filtradas.length) { 
-            container.innerHTML = '<p style="text-align:center; padding: 40px; color: var(--text-muted); font-family: var(--font-display);">Nenhum sistema corresponde aos critérios informados.</p>'; 
+            container.innerHTML = '<p style="text-align:center; padding: 40px; color: var(--text-muted); font-family: var(--font-display);">Nenhum sistema corresponde aos critérios informados. Clique em "Buscar no Google" para ampliar a pesquisa.</p>'; 
             return; 
         }
 
@@ -137,9 +158,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 const renderTagsArea = htmlTags ? `<div class="tags-container">${htmlTags}</div>` : `<div class="tags-container" style="min-height: 28px;"></div>`;
 
                 return `
-                <article class="card">
+                <article class="card glass-effect">
                     <div class="card-topo">
-                        <span class="card-emoji" aria-hidden="true">${item.emoji}</span>
+                        <span class="card-emoji glass-effect" aria-hidden="true">${item.emoji}</span>
                         <span class="card-tag">${item.categoria}</span>
                     </div>
                     <h3>${tituloLimpo}</h3>
@@ -147,13 +168,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     <p class="card-editorial">${item.descricao}</p>
                     ${renderTagsArea}
                     <div class="card-footer">
-                        <button class="btn-card-abrir" onclick="abrirModal('${item.id}')" aria-label="Analisar ${tituloLimpo}">Ver Detalhes</button>
+                        <button class="btn-card-abrir glass-btn" onclick="abrirModal('${item.id}')" aria-label="Analisar ${tituloLimpo}">Ver Detalhes</button>
                         <a class="link-card-oficial" href="${item.url}" target="_blank" rel="noopener noreferrer">Acessar Oficial ➔</a>
                     </div>
                 </article>`;
             }).join('');
             
-            const areaAds = idx < arr.length - 1 ? `<div class="area-adsense"><p class="ads-label">Apoio Estratégico</p></div>` : '';
+            const areaAds = idx < arr.length - 1 ? `<div class="area-adsense glass-effect"><p class="ads-label">Apoio Estratégico</p></div>` : '';
             return `<section class="sessao-categoria"><h2 class="sessao-titulo">${cat}</h2><div class="grid-cards">${cards}</div></section>${areaAds}`;
         }).join('');
     }
@@ -178,7 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLink.href = item.url;
         
         const btnShare = document.getElementById('botoes-compartilhamento');
-        btnShare.innerHTML = `<button class="btn-share" onclick="compartilhar('${tituloLimpo}', '${item.id}')">Copiar Link e Indicar</button>`;
+        btnShare.innerHTML = `<button class="btn-share glass-btn" onclick="compartilhar('${tituloLimpo}', '${item.id}')">Copiar Link e Indicar</button>`;
         
         const modal = document.getElementById('modal-overlay');
         modal.classList.remove('hidden');
