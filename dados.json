@@ -295,5 +295,77 @@
     "dor_resolvida": "Impossibilidade geográfica e financeira de acessar a vanguarda científica das universidades americanas.",
     "descricao": "Agregador criado pelo MIT e Harvard. Permite que o aluno acesse o material e as aulas das melhores universidades do mundo sem pagar nada. O bloqueio (trade-off) ocorre na etapa final, onde a validação e o certificado são pagos.",
     "url": "https://www.edx.org/"
+  },
+  {
+    "id": "eo-034",
+    "nome": "É Nóis na Fita [Sem Certificado]",
+    "categoria": "Formação Técnica e Cultura",
+    "emoji": "🎬",
+    "dor_resolvida": "Falta de acesso a cursos práticos de cinema e audiovisual de qualidade.",
+    "descricao": "Curso de cinema voltado para democratizar o acesso ao audiovisual. Focado em roteiro, direção e edição, oferecendo uma base criativa fantástica.",
+    "url": "https://www.enoisnafita.com.br/"
+  },
+  {
+    "id": "eo-035",
+    "nome": "Escult",
+    "categoria": "Formação Técnica e Cultura",
+    "emoji": "🎨",
+    "dor_resolvida": "Escassez de plataformas gratuitas focadas no mercado da economia criativa e artes.",
+    "descricao": "Plataforma de capacitação dedicada a cursos de cultura e arte. Ideal para produtores culturais e artistas que buscam aprimoramento em suas carreiras e projetos.",
+    "url": "https://escult.com.br/"
+  },
+  {
+    "id": "eo-036",
+    "nome": "Orango",
+    "categoria": "Gestão e Negócios",
+    "emoji": "🧠",
+    "dor_resolvida": "Necessidade de capacitação rápida em habilidades comportamentais e desenvolvimento de equipes.",
+    "descricao": "Plataforma focada em soft skills, liderança e resolução de problemas, elementos essenciais e altamente valorizados no mercado corporativo atual.",
+    "url": "https://orango.com.br/"
+  },
+  {
+    "id": "eo-037",
+    "nome": "Sesc Digital",
+    "categoria": "Formação Técnica e Cultura",
+    "emoji": "🏛️",
+    "dor_resolvida": "Dificuldade de acesso a conteúdos EAD de qualidade em artes, humanidades e cultura.",
+    "descricao": "Plataforma livre do Sesc com acervo riquíssimo que abrange artes visuais, música, gestão sustentável e muito mais, oferecendo acesso democrático à cultura.",
+    "url": "https://ead.sesc.digital/"
+  },
+  {
+    "id": "eo-038",
+    "nome": "TIM Tec",
+    "categoria": "Programação e Tecnologia",
+    "emoji": "💻",
+    "dor_resolvida": "Barreira técnica inicial para ingressar no desenvolvimento web e tecnologia da informação.",
+    "descricao": "Plataforma do Instituto TIM focada em Tecnologias da Informação e Comunicação (TICs), oferecendo dezenas de cursos gratuitos sobre programação, desenvolvimento e design.",
+    "url": "https://timtec.com.br/"
+  },
+  {
+    "id": "eo-039",
+    "nome": "Qualifica TIM",
+    "categoria": "Gestão e Negócios",
+    "emoji": "📱",
+    "dor_resolvida": "Alto consumo de pacote de dados móveis ao tentar estudar pelo celular no dia a dia.",
+    "descricao": "Aplicativo com mais de 180 cursos rápidos com certificado digital em áreas como Administração e Marketing, permitindo baixar as aulas para estudar offline.",
+    "url": "https://www.tim.com.br/para-voce/servicos-tim/qualifica"
+  },
+  {
+    "id": "eo-040",
+    "nome": "Descomplica TIM [Acesso Livre]",
+    "categoria": "Gestão e Negócios",
+    "emoji": "🚀",
+    "dor_resolvida": "Falta de combos rápidos de capacitação executiva acessíveis pelo celular sem limites de dados.",
+    "descricao": "Parceria que libera, sem descontar do seu pacote de dados, combos exclusivos de capacitação rápida e prática, como Marketing e Liderança 4.0.",
+    "url": "https://descomplica.com.br/tim/"
+  },
+  {
+    "id": "eo-041",
+    "nome": "Blip Academy",
+    "categoria": "Programação e Tecnologia",
+    "emoji": "🤖",
+    "dor_resolvida": "Dificuldade em encontrar capacitação gratuita e especializada no mercado de Inteligência Artificial e Chatbots.",
+    "descricao": "A Blip Academy oferece cursos online de criação de Chatbots, IA e mercado conversacional. Aprenda com quem é referência global na área.",
+    "url": "https://academy.blip.ai/"
   }
 ]
