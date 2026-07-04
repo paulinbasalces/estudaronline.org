@@ -1,20 +1,5 @@
 [
-  {
-    "nome": "Trabalho e Futuro",
-    "emoji": "🚀",
-    "descricao": "Curadoria focada em contornar os pontos de exclusão do mercado de trabalho moderno.",
-    "url": "https://trabalhoefuturo.com/"
-  },
-  {
-    "nome": "Viajar com Seguro",
-    "emoji": "🛡️",
-    "descricao": "Proteção exata para a sua jornada sem jargões indecifráveis.",
-    "url": "https://viajarcomseguro.com/"
-  },
-  {
-    "nome": "Café Pra Viagem",
-    "emoji": "☕",
-    "descricao": "Táticas logísticas para a extração do melhor café em ambientes de trânsito.",
-    "url": "https://cafepraviagem.com/"
-  }
+  { "nome": "Trabalho e Futuro", "emoji": "🚀", "url": "https://trabalhoefuturo.com/" },
+  { "nome": "Viajar com Seguro", "emoji": "🛡️", "url": "https://viajarcomseguro.com/" },
+  { "nome": "Café Pra Viagem", "emoji": "☕", "url": "https://cafepraviagem.com/" }
 ]

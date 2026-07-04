@@ -1,256 +1,43 @@
 [
-  {
-    "id": "eo-001",
-    "nome": "FreeCodeCamp",
-    "categoria": "Programação e Tecnologia",
-    "emoji": "⌨️",
-    "dor_resolvida": "Barreira financeira severa e a falta de portfólio real para desenvolvedores juniores ingressarem no mercado.",
-    "descricao": "Trilhas completas de desenvolvimento web e arquitetura de software com projetos práticos e emissão de certificados de alto peso global. A plataforma elimina a necessidade de configurações complexas no início, focando em fazer o aluno codar nativamente. Exige leitura técnica analítica em inglês.",
-    "url": "https://www.freecodecamp.org/portuguese/"
-  },
-  {
-    "id": "eo-002",
-    "nome": "Curso em Vídeo [Sem Certificado]",
-    "categoria": "Programação e Tecnologia",
-    "emoji": "👨‍💻",
-    "dor_resolvida": "Dificuldade de aprender lógica de programação e Python inicial através de didáticas excessivamente burocráticas.",
-    "descricao": "Um dos maiores canais de tecnologia da América Latina, reconhecido por uma didática acolhedora que combate ativamente a evasão no setor de TI. O conhecimento, os exercícios e as aulas são 100% gratuitos, porém a emissão do diploma oficial atrelado à plataforma exige uma taxa de contribuição.",
-    "url": "https://www.cursoemvideo.com/"
-  },
-  {
-    "id": "eo-003",
-    "nome": "Instituto TIM",
-    "categoria": "Programação e Tecnologia",
-    "emoji": "📐",
-    "dor_resolvida": "Lacunas teóricas graves em disciplinas exatas, lógica algorítmica e matemática aplicada ao desenvolvimento.",
-    "descricao": "Oferece cursos online, gratuitos e massivos com certificação oficial chancelada. O foco incisivo da curadoria recai sobre a superação do medo da matemática básica e introdução sólida à arquitetura de software, ideal para perfis que buscam transição de carreira sem background técnico prévio.",
-    "url": "https://cursos.institutotim.org.br/"
-  },
-  {
-    "id": "eo-004",
-    "nome": "Cisco Skills For All",
-    "categoria": "Programação e Tecnologia",
-    "emoji": "🛡️",
-    "dor_resolvida": "Alto custo de entrada nas certificações iniciais exigidas para atuar no mercado corporativo de cibersegurança e redes.",
-    "descricao": "A gigante Cisco disponibiliza laboratórios interativos em nuvem e a emissão de emblemas digitais (badges) totalmente gratuitos. O conteúdo é técnico, amplamente regulatório e excelente para compor o currículo de profissionais de suporte de infraestrutura e analistas de segurança da informação.",
-    "url": "https://skillsforall.com/"
-  },
-  {
-    "id": "eo-005",
-    "nome": "W3Schools [Sem Certificado]",
-    "categoria": "Programação e Tecnologia",
-    "emoji": "🌐",
-    "dor_resolvida": "Carência de documentação rápida, interativa e visualmente fluida para a consulta de marcação web e linguagens padrão.",
-    "descricao": "Reconhecido como o maior tutorial web autoinstrucional do mundo, permitindo testar o código diretamente no navegador de forma orgânica. O acesso irrestrito funciona de forma vitalícia como acervo de pesquisa para desenvolvedores front-end, embora a prova formal de certificação global seja tarifada.",
-    "url": "https://www.w3schools.com/"
-  },
-  {
-    "id": "eo-006",
-    "nome": "Chief of Design [Sem Certificado]",
-    "categoria": "Design e UX/UI",
-    "emoji": "🎨",
-    "dor_resolvida": "Ausência de embasamento visual estruturado, teoria avançada das cores e uso tático de ferramentas UX/UI para novos designers.",
-    "descricao": "Acervo vital em vídeo para quem deseja ingressar no mercado de UX/UI e Design de Interfaces com contexto mercadológico autêntico. Garante acesso livre a conceitos profundos de usabilidade e arquitetura de informação, operando no formato de consumo de conteúdo sem emissão de diploma acadêmico.",
-    "url": "https://www.youtube.com/c/chiefofdesign"
-  },
-  {
-    "id": "eo-007",
-    "nome": "UX Unicórnio (YouTube) [Sem Certificado]",
-    "categoria": "Design e UX/UI",
-    "emoji": "🦄",
-    "dor_resolvida": "Desconhecimento grave sobre como estruturar cases de portfólio em UX Research para conseguir as primeiras entrevistas.",
-    "descricao": "Canal estritamente focado em transição de carreira para a área de Experiência do Usuário (UX). Um material indispensável para absorver a cultura ágil, o mapeamento de jornadas de usuário e os testes de usabilidade, servindo como forte base consultiva gratuita, embora sem certificação.",
-    "url": "https://www.youtube.com/c/UXUnic%C3%B3rnio"
-  },
-  {
-    "id": "eo-008",
-    "nome": "Hashtag Treinamentos [Sem Certificado]",
-    "categoria": "Pacote Office e Dados",
-    "emoji": "📊",
-    "dor_resolvida": "Exclusão sumária em triagens de emprego devido à falta de domínio prático e rápido em Excel, VBA e Power BI.",
-    "descricao": "Aulas gratuitas massivas e altamente didáticas focadas no que realmente é cobrado em testes de empresas. Do PROCV à construção de dashboards complexos do zero, é um conteúdo altamente tático e demandado no mundo financeiro, voltado a quem precisa aprender a ferramenta, independentemente do papel do certificado.",
-    "url": "https://www.youtube.com/c/HashtagTreinamentos"
-  },
-  {
-    "id": "eo-009",
-    "nome": "Fundação Bradesco",
-    "categoria": "Pacote Office e Dados",
-    "emoji": "📈",
-    "dor_resolvida": "Inexperiência em rotinas administrativas padronizadas e a necessidade urgente de certificação oficial no Microsoft Office.",
-    "descricao": "Carregando ampla tradição em EAD corporativo no Brasil, disponibiliza trilhas completas de Excel avançado, Word e Matemática Financeira com certificados gratuitos emitidos instantaneamente. A chancela possui enorme reconhecimento em processos seletivos para secretariado e gestão administrativa.",
-    "url": "https://www.ev.org.br/"
-  },
-  {
-    "id": "eo-010",
-    "nome": "Kaggle",
-    "categoria": "Pacote Office e Dados",
-    "emoji": "🤖",
-    "dor_resolvida": "Falta de ambiente configurado e bancos de dados em tempo real para treinar modelos preditivos de Machine Learning.",
-    "descricao": "A mais proeminente comunidade de Ciência de Dados do planeta disponibiliza micro-cursos densos sobre Python, SQL e Big Data visual. Os laboratórios são executados diretamente na nuvem, eliminando gargalos de processamento de hardware do aluno, entregando certificados ao fim das trilhas de engenharia.",
-    "url": "https://www.kaggle.com/learn"
-  },
-  {
-    "id": "eo-011",
-    "nome": "Kultivi",
-    "categoria": "Idiomas e Preparatórios",
-    "emoji": "🗣️",
-    "dor_resolvida": "Impossibilidade absoluta de arcar com as altas mensalidades de escolas tradicionais de idiomas (Inglês, Espanhol, Francês e Italiano).",
-    "descricao": "Disponibiliza grades curriculares de idiomas completas e totalmente gratuitas, cobrindo níveis do básico ao avançado com a respectiva emissão de certificado. O modelo que viabiliza essa estrutura depende de anúncios publicitários ao longo da interface, exigindo foco do aluno em contraponto à ausência de custos.",
-    "url": "https://kultivi.com/"
-  },
-  {
-    "id": "eo-012",
-    "nome": "Aprenda Mais (MEC)",
-    "categoria": "Idiomas e Preparatórios",
-    "emoji": "🇧🇷",
-    "dor_resolvida": "Dificuldade impeditiva para obter certificados oficiais de idiomas aceitos pelo governo para abater horas complementares universitárias.",
-    "descricao": "Plataforma chancelada diretamente pelo Ministério da Educação. Fornece rotas de Espanhol e Inglês altamente estruturadas no formato de leitura autoinstrucional. O certificado gerado possui lastro federal e é aceito sem ressalvas na vasta maioria das coordenações universitárias do país.",
-    "url": "https://aprendamais.mec.gov.br/"
-  },
-  {
-    "id": "eo-013",
-    "nome": "Duolingo [Acesso Livre]",
-    "categoria": "Idiomas e Preparatórios",
-    "emoji": "🦉",
-    "dor_resolvida": "Falta de constância, desmotivação rápida e atrito inicial severo com o vocabulário primário de uma nova língua estrangeira.",
-    "descricao": "Abordagem baseada em microaprendizado (microlearning) e gamificação pesada projetada para quebrar a procrastinação de iniciar o estudo de um novo idioma. É uma ferramenta espetacular para a criação de hábitos diários, mas que necessita ser suplementada se o alvo for a proficiência acadêmica chancelada (que é paga).",
-    "url": "https://pt.duolingo.com/"
-  },
-  {
-    "id": "eo-014",
-    "nome": "Escola Virtual do Governo (EV.G)",
-    "categoria": "Gestão e Negócios",
-    "emoji": "🏛️",
-    "dor_resolvida": "Mapeamento deficiente em legislações modernas como LGPD, políticas públicas transversais e implantação de metodologias ágeis no Estado.",
-    "descricao": "Repositório educacional estratégico gerido pela Escola Nacional de Administração Pública (ENAP). Os diplomas são gerados automaticamente com códigos de validação autêntica e inquestionável, sendo cobrados para progressões funcionais em concursos e respeitados por departamentos de compliance no mercado financeiro privado.",
-    "url": "https://www.escolavirtual.gov.br/"
-  },
-  {
-    "id": "eo-015",
-    "nome": "Sebrae",
-    "categoria": "Gestão e Negócios",
-    "emoji": "💡",
-    "dor_resolvida": "Desinformação tributária perigosa, falhas primárias de marketing digital e modelos de precificação precários para Microempreendedores (MEIs).",
-    "descricao": "Acervo calibrado sob medida para a dura realidade empresarial do Brasil. O escopo abrange aulas práticas sobre negociação B2B, formação racional de preços e estratégias de sobrevivência comercial em crises. Cursos extremamente táticos e diretos que geram certificação oficial respeitada no mercado.",
-    "url": "https://www.sebrae.com.br/sites/PortalSebrae/cursosonline"
-  },
-  {
-    "id": "eo-016",
-    "nome": "FGV Educação Executiva",
-    "categoria": "Gestão e Negócios",
-    "emoji": "🎓",
-    "dor_resolvida": "Necessidade iminente de fortalecer o currículo corporativo atrelando o perfil profissional a uma instituição de vanguarda no Brasil.",
-    "descricao": "A Fundação Getulio Vargas abre recortes selecionados de suas disciplinas executivas em formato de leitura técnica e acadêmica densa. A abordagem exige forte concentração do aluno e destina-se a gestores interessados em fundamentos conceituais, macroeconomia e liderança, emitindo comprovante autêntico de participação.",
-    "url": "https://educacao-executiva.fgv.br/cursos/gratuitos"
-  },
-  {
-    "id": "eo-017",
-    "nome": "ILB (Senado Federal)",
-    "categoria": "Gestão e Negócios",
-    "emoji": "📜",
-    "dor_resolvida": "Lacuna no entendimento formal e direto sobre ritos do Poder Legislativo, administração orçamentária e a engrenagem burocrática da União.",
-    "descricao": "O Instituto Legislativo Brasileiro democratiza de forma brilhante a arquitetura legal do Estado. Funciona como uma base crucial para estudantes de Direito Administrativo e concurseiros que buscam fixar o processo constitucional e licitatório na mente, com certificados aprovados sem restrições em grades acadêmicas.",
-    "url": "https://saberes.senado.leg.br/"
-  },
-  {
-    "id": "eo-018",
-    "nome": "Coursera [Modo Ouvinte]",
-    "categoria": "Gestão e Negócios",
-    "emoji": "🌍",
-    "dor_resolvida": "Exclusão global estrutural: o bloqueio financeiro massivo para absorver a vanguarda do conhecimento gerado nas maiores universidades do planeta.",
-    "descricao": "Uma arquitetura robusta que esconde, deliberadamente, a visualização em 'Modo Ouvinte' (Audit). Essa modalidade oculta autoriza o estudante a assistir integralmente ao material de Stanford, Yale ou do Google. O bloqueio existe unicamente na restrição de correções de provas e no diploma em papel, que demandam pagamento em dólares.",
-    "url": "https://www.coursera.org/"
-  },
-  {
-    "id": "eo-019",
-    "nome": "B3 Educação",
-    "categoria": "Finanças e Investimentos",
-    "emoji": "💸",
-    "dor_resolvida": "Vulnerabilidade sistêmica à especulação, fraudes digitais e o desconhecimento basal sobre como blindar o patrimônio familiar contra a inflação galopante.",
-    "descricao": "Hub mantido com precisão pela bolsa de valores oficial do Brasil (B3). O conteúdo conduz o aluno de forma serena desde estratégias agressivas para saneamento de dívidas pessoais até análises fundamentalistas avançadas de ações em mercado, sempre conservando isenção comercial absoluta e emitindo certificação formativa.",
-    "url": "https://edu.b3.com.br/"
-  },
-  {
-    "id": "eo-020",
-    "nome": "CVM Educacional",
-    "categoria": "Finanças e Investimentos",
-    "emoji": "⚖️",
-    "dor_resolvida": "Falta perigosa de compreensão técnica aprofundada sobre as regulações restritas do mercado financeiro e os escudos legais do pequeno investidor.",
-    "descricao": "Totalmente regulada e chancelada pela Comissão de Valores Mobiliários. A plataforma desmente fórmulas mágicas de riqueza, entregando um conteúdo matemático e regulatório denso. O foco é a proteção previdenciária e o conhecimento cristalino sobre direitos e deveres em transações imobiliárias e de capitais.",
-    "url": "https://www.investidor.gov.br/menu/Menu_Academico/Cursos_online.html"
-  },
-  {
-    "id": "eo-021",
-    "nome": "Sesc (Cursos Livres)",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "🎭",
-    "dor_resolvida": "Escassez aguda de plataformas EAD públicas focadas primordialmente em produção cultural, artes e fortalecimento do bem-estar comunitário.",
-    "descricao": "O ambiente EAD do Sesc apresenta uma via necessária para profissionais fora do escopo puramente corporativo e de TI. É uma fonte estratégica para a capacitação formal em áreas da economia criativa, produção musical e desenvolvimento sustentável comunitário, entregando horas complementares valiosas.",
-    "url": "https://ead.sesc.com.br/"
-  },
-  {
-    "id": "eo-022",
-    "nome": "SENAI EAD",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "⚙️",
-    "dor_resolvida": "Distanciamento das premissas exigidas pela Indústria 4.0, inovação em processos logísticos e tecnologia de automação básica.",
-    "descricao": "Plataforma referencial incontestável para trabalhadores da base produtiva. Disponibiliza acesso a competências transversais de alta urgência para a indústria pesada e manufatura. A didática baseia-se em conceitos normativos (NRs) e teóricos, preparando o terreno com certificação para a futura etapa presencial no chão de fábrica.",
-    "url": "https://ead.senai.br/"
-  },
-  {
-    "id": "eo-023",
-    "nome": "SENAC EAD (Cursos Livres)",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "🏪",
-    "dor_resolvida": "Dificuldade enorme em conquistar especializações rápidas e chanceladas para inserção imediata no comércio, turismo e serviços terciários.",
-    "descricao": "Detentora de uma das grades curriculares mais ágeis e disputadas do país, condiciona o acesso aos seus editais regionais de gratuidade. A metodologia pedagógica é impecável e altamente voltada à resolução rápida de conflitos e prestação de serviços, gerando diplomas fortíssimos no universo varejista.",
-    "url": "https://www.ead.senac.br/gratuito/"
-  },
-  {
-    "id": "eo-024",
-    "nome": "SEST SENAT EAD",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "🚚",
-    "dor_resolvida": "Ignorância acerca das pesadas normas regulamentadoras rodoviárias e logísticas que funcionam como barreira de contratação direta em frotas.",
-    "descricao": "Acervo monumental focado em compliance para o gigantesco sistema de mobilidade e logística brasileiro. Certifica motoristas e gestores em processos de direção inteligente, manutenção preventiva de custos e atendimento a resoluções restritas, requisitos listados como essenciais em currículos de transportadoras.",
-    "url": "https://ead.sestsenat.org.br/"
-  },
-  {
-    "id": "eo-025",
-    "nome": "SENAR EAD",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "🌾",
-    "dor_resolvida": "Distanciamento e alienação das tecnologias rurais e falta de técnicas administrativas aplicáveis no empreendedorismo do campo nacional.",
-    "descricao": "Centro tecnológico desenhado para modernizar a gestão do motor econômico nacional: o agronegócio. Funde os fundamentos da qualificação biológica e manejo de solo com estratégias contemporâneas de gestão de commodities. As avaliações ao término das cartilhas geram certificados do conceituado Sistema S.",
-    "url": "https://ead.senar.org.br/"
-  },
-  {
-    "id": "eo-026",
-    "nome": "GINEAD [Sem Certificado]",
-    "categoria": "Formação Técnica e Cultura",
-    "emoji": "📚",
-    "dor_resolvida": "Dificuldade constante de encontrar materiais teóricos em formato de apostilas condensadas para revisão acelerada e fundamentação para concursos.",
-    "descricao": "Opera como um gigantesco agregador e portal de cartilhas digitais. O estudante possui livre trânsito a todo o arcabouço textual dos treinamentos. A estratégia de monetização que sustenta o portal, contudo, cobra taxas rigorosas para a realização da prova de proficiência e posterior desbloqueio do PDF do diploma.",
-    "url": "https://www.ginead.com.br/"
-  },
-  {
-    "id": "eo-027",
-    "nome": "CIEE Saber Virtual",
-    "categoria": "Carreira e Jovem Aprendiz",
-    "emoji": "🎯",
-    "dor_resolvida": "Falta de traquejo corporativo, insegurança comportamental perante hierarquias e total dificuldade na redação de currículos estruturados.",
-    "descricao": "Desenvolvido com o intuito de criar uma ponte sólida entre a sala de aula e os jargões do mundo corporativo moderno. As trilhas focam na inteligência emocional e soft skills, treinando o estagiário a lidar com diversidade e comunicação não violenta. O certificado ajuda incrivelmente em relatórios de horas exigidos em universidades.",
-    "url": "https://sabervirtual.ciee.org.br/"
-  },
-  {
-    "id": "eo-028",
-    "nome": "Escola do Trabalhador 4.0",
-    "categoria": "Carreira e Jovem Aprendiz",
-    "emoji": "🖱️",
-    "dor_resolvida": "Exclusão massiva de adultos do atual mercado de trabalho formal devido à presença de deficiências tecnológicas em rotinas de secretariado.",
-    "descricao": "Uma parceria oficial emergencial e de fortíssimo impacto formulada pelo Ministério do Trabalho e o braço corporativo da Microsoft. Totalmente centrada no letramento digital do indivíduo, ensina o uso pleno de pacotes de escritório, segurança de dados pessoais básicos e uso inteligente de aplicações na nuvem.",
-    "url": "https://escoladotrabalhador40.mte.gov.br/"
-  },
-  {
-    "id": "eo-029",
-    "
+  { "id": "eo-001", "nome": "FreeCodeCamp", "categoria": "Programação e Tecnologia", "emoji": "⌨️", "dor_resolvida": "Barreira financeira severa e a falta de portfólio real para desenvolvedores juniores ingressarem no mercado.", "descricao": "Trilhas completas de desenvolvimento web e arquitetura de software com projetos práticos e emissão de certificados de alto peso global. A plataforma elimina a necessidade de configurações complexas no início, focando em fazer o aluno codar nativamente. Exige leitura técnica analítica em inglês.", "url": "https://www.freecodecamp.org/portuguese/" },
+  { "id": "eo-002", "nome": "Curso em Vídeo [Sem Certificado]", "categoria": "Programação e Tecnologia", "emoji": "👨‍💻", "dor_resolvida": "Dificuldade de aprender lógica de programação e Python inicial através de didáticas excessivamente burocráticas.", "descricao": "Um dos maiores canais de tecnologia da América Latina, reconhecido por uma didática acolhedora que combate ativamente a evasão no setor de TI. O conhecimento, os exercícios e as aulas são 100% gratuitos, porém a emissão do diploma oficial atrelado à plataforma exige uma taxa de contribuição.", "url": "https://www.cursoemvideo.com/" },
+  { "id": "eo-003", "nome": "Instituto TIM", "categoria": "Programação e Tecnologia", "emoji": "📐", "dor_resolvida": "Lacunas teóricas graves em disciplinas exatas, lógica algorítmica e matemática aplicada ao desenvolvimento.", "descricao": "Oferece cursos online, gratuitos e massivos com certificação oficial chancelada. O foco incisivo da curadoria recai sobre a superação do medo da matemática básica e introdução sólida à arquitetura de software, ideal para perfis que buscam transição de carreira sem background técnico prévio.", "url": "https://cursos.institutotim.org.br/" },
+  { "id": "eo-004", "nome": "Cisco Skills For All", "categoria": "Programação e Tecnologia", "emoji": "🛡️", "dor_resolvida": "Alto custo de entrada nas certificações iniciais exigidas para atuar no mercado corporativo de cibersegurança e redes.", "descricao": "A gigante Cisco disponibiliza laboratórios interativos em nuvem e a emissão de emblemas digitais (badges) totalmente gratuitos. O conteúdo é técnico, amplamente regulatório e excelente para compor o currículo de profissionais de suporte de infraestrutura e analistas de segurança da informação.", "url": "https://skillsforall.com/" },
+  { "id": "eo-005", "nome": "W3Schools [Sem Certificado]", "categoria": "Programação e Tecnologia", "emoji": "🌐", "dor_resolvida": "Carência de documentação rápida, interativa e visualmente fluida para a consulta de marcação web e linguagens padrão.", "descricao": "Reconhecido como o maior tutorial web autoinstrucional do mundo, permitindo testar o código diretamente no navegador de forma orgânica. O acesso irrestrito funciona de forma vitalícia como acervo de pesquisa para desenvolvedores front-end, embora a prova formal de certificação global seja tarifada.", "url": "https://www.w3schools.com/" },
+  { "id": "eo-006", "nome": "Chief of Design [Sem Certificado]", "categoria": "Design e UX/UI", "emoji": "🎨", "dor_resolvida": "Ausência de embasamento visual estruturado, teoria avançada das cores e uso tático de ferramentas UX/UI para novos designers.", "descricao": "Acervo vital em vídeo para quem deseja ingressar no mercado de UX/UI e Design de Interfaces com contexto mercadológico autêntico. Garante acesso livre a conceitos profundos de usabilidade e arquitetura de informação, operando no formato de consumo de conteúdo sem emissão de diploma acadêmico.", "url": "https://www.youtube.com/c/chiefofdesign" },
+  { "id": "eo-007", "nome": "UX Unicórnio (YouTube) [Sem Certificado]", "categoria": "Design e UX/UI", "emoji": "🦄", "dor_resolvida": "Desconhecimento grave sobre como estruturar cases de portfólio em UX Research para conseguir as primeiras entrevistas.", "descricao": "Canal estritamente focado em transição de carreira para a área de Experiência do Usuário (UX). Um material indispensável para absorver a cultura ágil, o mapeamento de jornadas de usuário e os testes de usabilidade, servindo como forte base consultiva gratuita, embora sem certificação.", "url": "https://www.youtube.com/c/UXUnic%C3%B3rnio" },
+  { "id": "eo-008", "nome": "Hashtag Treinamentos [Sem Certificado]", "categoria": "Pacote Office e Dados", "emoji": "📊", "dor_resolvida": "Exclusão sumária em triagens de emprego devido à falta de domínio prático e rápido em Excel, VBA e Power BI.", "descricao": "Aulas gratuitas massivas e altamente didáticas focadas no que realmente é cobrado em testes de empresas. Do PROCV à construção de dashboards complexos do zero, é um conteúdo altamente tático e demandado no mundo financeiro, voltado a quem precisa aprender a ferramenta, independentemente do papel do certificado.", "url": "https://www.youtube.com/c/HashtagTreinamentos" },
+  { "id": "eo-009", "nome": "Fundação Bradesco", "categoria": "Pacote Office e Dados", "emoji": "📈", "dor_resolvida": "Inexperiência em rotinas administrativas padronizadas e a necessidade urgente de certificação oficial no Microsoft Office.", "descricao": "Carregando ampla tradição em EAD corporativo no Brasil, disponibiliza trilhas completas de Excel avançado, Word e Matemática Financeira com certificados gratuitos emitidos instantaneamente. A chancela possui enorme reconhecimento em processos seletivos para secretariado e gestão administrativa.", "url": "https://www.ev.org.br/" },
+  { "id": "eo-010", "nome": "Kaggle", "categoria": "Pacote Office e Dados", "emoji": "🤖", "dor_resolvida": "Falta de ambiente configurado e bancos de dados em tempo real para treinar modelos preditivos de Machine Learning.", "descricao": "A mais proeminente comunidade de Ciência de Dados do planeta disponibiliza micro-cursos densos sobre Python, SQL e Big Data visual. Os laboratórios são executados diretamente na nuvem, eliminando gargalos de processamento de hardware do aluno, entregando certificados ao fim das trilhas de engenharia.", "url": "https://www.kaggle.com/learn" },
+  { "id": "eo-011", "nome": "Kultivi", "categoria": "Idiomas e Preparatórios", "emoji": "🗣️", "dor_resolvida": "Impossibilidade absoluta de arcar com as altas mensalidades de escolas tradicionais de idiomas (Inglês, Espanhol, Francês e Italiano).", "descricao": "Disponibiliza grades curriculares de idiomas completas e totalmente gratuitas, cobrindo níveis do básico ao avançado com a respectiva emissão de certificado. O modelo que viabiliza essa estrutura depende de anúncios publicitários ao longo da interface, exigindo foco do aluno em contraponto à ausência de custos.", "url": "https://kultivi.com/" },
+  { "id": "eo-012", "nome": "Aprenda Mais (MEC)", "categoria": "Idiomas e Preparatórios", "emoji": "🇧🇷", "dor_resolvida": "Dificuldade impeditiva para obter certificados oficiais de idiomas aceitos pelo governo para abater horas complementares universitárias.", "descricao": "Plataforma chancelada diretamente pelo Ministério da Educação. Fornece rotas de Espanhol e Inglês altamente estruturadas no formato de leitura autoinstrucional. O certificado gerado possui lastro federal e é aceito sem ressalvas na vasta maioria das coordenações universitárias do país.", "url": "https://aprendamais.mec.gov.br/" },
+  { "id": "eo-013", "nome": "Duolingo [Acesso Livre]", "categoria": "Idiomas e Preparatórios", "emoji": "🦉", "dor_resolvida": "Falta de constância, desmotivação rápida e atrito inicial severo com o vocabulário primário de uma nova língua estrangeira.", "descricao": "Abordagem baseada em microaprendizado (microlearning) e gamificação pesada projetada para quebrar a procrastinação de iniciar o estudo de um novo idioma. É uma ferramenta espetacular para a criação de hábitos diários, mas que necessita ser suplementada se o alvo for a proficiência acadêmica chancelada (que é paga).", "url": "https://pt.duolingo.com/" },
+  { "id": "eo-014", "nome": "Escola Virtual do Governo (EV.G)", "categoria": "Gestão e Negócios", "emoji": "🏛️", "dor_resolvida": "Mapeamento deficiente em legislações modernas como LGPD, políticas públicas transversais e implantação de metodologias ágeis no Estado.", "descricao": "Repositório educacional estratégico gerido pela Escola Nacional de Administração Pública (ENAP). Os diplomas são gerados automaticamente com códigos de validação autêntica e inquestionável, sendo cobrados para progressões funcionais em concursos e respeitados por departamentos de compliance no mercado financeiro privado.", "url": "https://www.escolavirtual.gov.br/" },
+  { "id": "eo-015", "nome": "Sebrae", "categoria": "Gestão e Negócios", "emoji": "💡", "dor_resolvida": "Desinformação tributária perigosa, falhas primárias de marketing digital e modelos de precificação precários para Microempreendedores (MEIs).", "descricao": "Acervo calibrado sob medida para a dura realidade empresarial do Brasil. O escopo abrange aulas práticas sobre negociação B2B, formação racional de preços e estratégias de sobrevivência comercial em crises. Cursos extremamente táticos e diretos que geram certificação oficial respeitada no mercado.", "url": "https://www.sebrae.com.br/sites/PortalSebrae/cursosonline" },
+  { "id": "eo-016", "nome": "FGV Educação Executiva", "categoria": "Gestão e Negócios", "emoji": "🎓", "dor_resolvida": "Necessidade iminente de fortalecer o currículo corporativo atrelando o perfil profissional a uma instituição de vanguarda no Brasil.", "descricao": "A Fundação Getulio Vargas abre recortes selecionados de suas disciplinas executivas em formato de leitura técnica e acadêmica densa. A abordagem exige forte concentração do aluno e destina-se a gestores interessados em fundamentos conceituais, macroeconomia e liderança, emitindo comprovante autêntico de participação.", "url": "https://educacao-executiva.fgv.br/cursos/gratuitos" },
+  { "id": "eo-017", "nome": "ILB (Senado Federal)", "categoria": "Gestão e Negócios", "emoji": "📜", "dor_resolvida": "Lacuna no entendimento formal e direto sobre ritos do Poder Legislativo, administração orçamentária e a engrenagem burocrática da União.", "descricao": "O Instituto Legislativo Brasileiro democratiza de forma brilhante a arquitetura legal do Estado. Funciona como uma base crucial para estudantes de Direito Administrativo e concurseiros que buscam fixar o processo constitucional e licitatório na mente, com certificados aprovados sem restrições em grades acadêmicas.", "url": "https://saberes.senado.leg.br/" },
+  { "id": "eo-018", "nome": "Coursera [Modo Ouvinte]", "categoria": "Gestão e Negócios", "emoji": "🌍", "dor_resolvida": "Exclusão global estrutural: o bloqueio financeiro massivo para absorver a vanguarda do conhecimento gerado nas maiores universidades do planeta.", "descricao": "Uma arquitetura robusta que esconde, deliberadamente, a visualização em 'Modo Ouvinte' (Audit). Essa modalidade oculta autoriza o estudante a assistir integralmente ao material de Stanford, Yale ou do Google. O bloqueio existe unicamente na restrição de correções de provas e no diploma em papel, que demandam pagamento em dólares.", "url": "https://www.coursera.org/" },
+  { "id": "eo-019", "nome": "B3 Educação", "categoria": "Finanças e Investimentos", "emoji": "💸", "dor_resolvida": "Vulnerabilidade sistêmica à especulação, fraudes digitais e o desconhecimento basal sobre como blindar o patrimônio familiar contra a inflação galopante.", "descricao": "Hub mantido com precisão pela bolsa de valores oficial do Brasil (B3). O conteúdo conduz o aluno de forma serena desde estratégias agressivas para saneamento de dívidas pessoais até análises fundamentalistas avançadas de ações em mercado, sempre conservando isenção comercial absoluta e emitindo certificação formativa.", "url": "https://edu.b3.com.br/" },
+  { "id": "eo-020", "nome": "CVM Educacional", "categoria": "Finanças e Investimentos", "emoji": "⚖️", "dor_resolvida": "Falta perigosa de compreensão técnica aprofundada sobre as regulações restritas do mercado financeiro e os escudos legais do pequeno investidor.", "descricao": "Totalmente regulada e chancelada pela Comissão de Valores Mobiliários. A plataforma desmente fórmulas mágicas de riqueza, entregando um conteúdo matemático e regulatório denso. O foco é a proteção previdenciária e o conhecimento cristalino sobre direitos e deveres em transações imobiliárias e de capitais.", "url": "https://www.investidor.gov.br/menu/Menu_Academico/Cursos_online.html" },
+  { "id": "eo-021", "nome": "Sesc (Cursos Livres)", "categoria": "Formação Técnica e Cultura", "emoji": "🎭", "dor_resolvida": "Escassez aguda de plataformas EAD públicas focadas primordialmente em produção cultural, artes e fortalecimento do bem-estar comunitário.", "descricao": "O ambiente EAD do Sesc apresenta uma via necessária para profissionais fora do escopo puramente corporativo e de TI. É uma fonte estratégica para a capacitação formal em áreas da economia criativa, produção musical e desenvolvimento sustentável comunitário, entregando horas complementares valiosas.", "url": "https://ead.sesc.com.br/" },
+  { "id": "eo-022", "nome": "SENAI EAD", "categoria": "Formação Técnica e Cultura", "emoji": "⚙️", "dor_resolvida": "Distanciamento das premissas exigidas pela Indústria 4.0, inovação em processos logísticos e tecnologia de automação básica.", "descricao": "Plataforma referencial incontestável para trabalhadores da base produtiva. Disponibiliza acesso a competências transversais de alta urgência para a indústria pesada e manufatura. A didática baseia-se em conceitos normativos (NRs) e teóricos, preparando o terreno com certificação para a futura etapa presencial no chão de fábrica.", "url": "https://ead.senai.br/" },
+  { "id": "eo-023", "nome": "SENAC EAD (Cursos Livres)", "categoria": "Formação Técnica e Cultura", "emoji": "🏪", "dor_resolvida": "Dificuldade enorme em conquistar especializações rápidas e chanceladas para inserção imediata no comércio, turismo e serviços terciários.", "descricao": "Detentora de uma das grades curriculares mais ágeis e disputadas do país, condiciona o acesso aos seus editais regionais de gratuidade. A metodologia pedagógica é impecável e altamente voltada à resolução rápida de conflitos e prestação de serviços, gerando diplomas fortíssimos no universo varejista.", "url": "https://www.ead.senac.br/gratuito/" },
+  { "id": "eo-024", "nome": "SEST SENAT EAD", "categoria": "Formação Técnica e Cultura", "emoji": "🚚", "dor_resolvida": "Ignorância acerca das pesadas normas regulamentadoras rodoviárias e logísticas que funcionam como barreira de contratação direta em frotas.", "descricao": "Acervo monumental focado em compliance para o gigantesco sistema de mobilidade e logística brasileiro. Certifica motoristas e gestores em processos de direção inteligente, manutenção preventiva de custos e atendimento a resoluções restritas, requisitos listados como essenciais em currículos de transportadoras.", "url": "https://ead.sestsenat.org.br/" },
+  { "id": "eo-025", "nome": "SENAR EAD", "categoria": "Formação Técnica e Cultura", "emoji": "🌾", "dor_resolvida": "Distanciamento e alienação das tecnologias rurais e falta de técnicas administrativas aplicáveis no empreendedorismo do campo nacional.", "descricao": "Centro tecnológico desenhado para modernizar a gestão do motor econômico nacional: o agronegócio. Funde os fundamentos da qualificação biológica e manejo de solo com estratégias contemporâneas de gestão de commodities. As avaliações ao término das cartilhas geram certificados do conceituado Sistema S.", "url": "https://ead.senar.org.br/" },
+  { "id": "eo-026", "nome": "GINEAD [Sem Certificado]", "categoria": "Formação Técnica e Cultura", "emoji": "📚", "dor_resolvida": "Dificuldade constante de encontrar materiais teóricos em formato de apostilas condensadas para revisão acelerada e fundamentação para concursos.", "descricao": "Opera como um gigantesco agregador e portal de cartilhas digitais. O estudante possui livre trânsito a todo o arcabouço textual dos treinamentos. A estratégia de monetização que sustenta o portal, contudo, cobra taxas rigorosas para a realização da prova de proficiência e posterior desbloqueio do PDF do diploma.", "url": "https://www.ginead.com.br/" },
+  { "id": "eo-027", "nome": "CIEE Saber Virtual", "categoria": "Carreira e Jovem Aprendiz", "emoji": "🎯", "dor_resolvida": "Falta de traquejo corporativo, insegurança comportamental perante hierarquias e total dificuldade na redação de currículos estruturados.", "descricao": "Desenvolvido com o intuito de criar uma ponte sólida entre a sala de aula e os jargões do mundo corporativo moderno. As trilhas focam na inteligência emocional e soft skills, treinando o estagiário a lidar com diversidade e comunicação não violenta. O certificado ajuda incrivelmente em relatórios de horas exigidos em universidades.", "url": "https://sabervirtual.ciee.org.br/" },
+  { "id": "eo-028", "nome": "Escola do Trabalhador 4.0", "categoria": "Carreira e Jovem Aprendiz", "emoji": "🖱️", "dor_resolvida": "Exclusão massiva de adultos do atual mercado de trabalho formal devido à presença de deficiências tecnológicas em rotinas de secretariado.", "descricao": "Uma parceria oficial emergencial e de fortíssimo impacto formulada pelo Ministério do Trabalho e o braço corporativo da Microsoft. Totalmente centrada no letramento digital do indivíduo, ensina o uso pleno de pacotes de escritório, segurança de dados pessoais básicos e uso inteligente de aplicações na nuvem.", "url": "https://escoladotrabalhador40.mte.gov.br/" },
+  { "id": "eo-029", "nome": "Rock University", "categoria": "Carreira e Jovem Aprendiz", "emoji": "📱", "dor_resolvida": "Necessidade constante e urgente de dominar algoritmos de Search Engine Optimization (SEO) e redação web (Inbound Marketing).", "descricao": "Aprova e qualifica anualmente os principais redatores e analistas de tráfego que atuam organicamente na internet. A certificação fornecida tornou-se o padrão ouro das agências de marketing, exigindo um nível considerável de acertos na prova. Alerta de perenidade: devido a atualizações constantes na web, a validade expirada é de 2 anos.", "url": "https://rockcontent.com/br/university/" },
+  { "id": "eo-030", "nome": "Recode", "categoria": "Carreira e Jovem Aprendiz", "emoji": "💡", "dor_resolvida": "Isolamento estrutural profundo de jovens em situação de alta vulnerabilidade periférica perante os altos salários da área de programação.", "descricao": "Organização não-governamental brasileira inovadora voltada 100% à apropriação tecnológica consciente. Encoraja a construção lógica dos primeiros aplicativos, mas sempre exigindo que esses projetos sejam soluções ativas para dores que castigam a comunidade em que o aluno reside. É educação, código e impacto civil formados numa frente só.", "url": "https://recode.org.br/" },
+  { "id": "eo-031", "nome": "UNIVESP (Aulas Públicas) [Sem Certificado]", "categoria": "Graduação e Ciências", "emoji": "🧪", "dor_resolvida": "Ausência profunda de lousas acadêmicas virtuais sistêmicas cobrindo engenharia, matemática pura e algoritmos em nível de bacharelado universitário.", "descricao": "Sem sombra de dúvidas, é o depositário educacional público com o maior rigor acadêmico documentado no YouTube. Expõe sem filtros centenas de grades semestrais completas dos cursos da Universidade Virtual de São Paulo. A missão é o simples repasse formidável da pesquisa, razão pela qual não existe sequer plataforma avaliativa atrelada.", "url": "https://www.youtube.com/user/univesptv" },
+  { "id": "eo-032", "nome": "Khan Academy [Acesso Livre]", "categoria": "Graduação e Ciências", "emoji": "🔢", "dor_resolvida": "Déficit epidêmico em letramento matemático básico, pavor do cálculo avançado e deficiência histórica em matérias das ciências duras nas escolas.", "descricao": "A Khan Academy atua como o suprassumo do ensino interativo e construtivista. Ela desmistifica desde a álgebra essencial de matrizes à termodinâmica com uma lógica gamificada em tela. Ela aponta lacunas do raciocínio em tempo real, sendo uma pílula extraordinária de reforço complementar, embora careça de status diplomado em si.", "url": "https://pt.khanacademy.org/" },
+  { "id": "eo-033", "nome": "edX [Modo Ouvinte]", "categoria": "Graduação e Ciências", "emoji": "🏛️", "dor_resolvida": "Impossibilidade cambial, financeira e logística abissal de estudar dentro dos polos de pesquisa das instituições globais de elite (Ivy League).", "descricao": "Uma joia arquitetural EAD criada através da aliança pioneira do MIT com a Universidade de Harvard. Garante ao usuário global, via 'Modo Ouvinte', espelhar exatamente a mesma rota de palestras e referências de alunos internacionais admitidos. Todavia, a formalidade blockchain dos certificados em PDF permanece tarifada e isolada.", "url": "https://www.edx.org/" },
+  { "id": "eo-034", "nome": "É Nóis na Fita [Sem Certificado]", "categoria": "Formação Técnica e Cultura", "emoji": "🎬", "dor_resolvida": "Monopólio econômico na formação audiovisual e o completo afastamento de criadores de favela no processo de roteirização e direção comercial.", "descricao": "A iniciativa surge contundente como uma escola popular com currículo 100% devotado a desmantelar os segredos técnicos do cinema autoral e videoclipe de baixo orçamento. Descontrói roteiro arquetípico, ritmo na montagem de corte e direção, empurrando as massas para o mercado vibrante do audiovisual web.", "url": "https://www.enoisnafita.com.br/" },
+  { "id": "eo-035", "nome": "Escult", "categoria": "Formação Técnica e Cultura", "emoji": "🎨", "dor_resolvida": "Terrível escassez de acervos gratuitos de peso que mergulhem nos bastidores de elaboração de captação de recursos e leis de incentivo à arte.", "descricao": "Atua assertivamente como um santuário focado apenas nas veias da economia criativa. É o hub preferido para curadores de arte independente, museólogos de primeira viagem e produtores executivos de teatro dispostos a destrinchar captação de patrocínio sustentável sem inflar ainda mais os parcos orçamentos da arte nacional.", "url": "https://escult.com.br/" },
+  { "id": "eo-036", "nome": "Orango", "categoria": "Gestão e Negócios", "emoji": "🧠", "dor_resolvida": "Profundo analfabetismo relacional no ambiente de trabalho: excesso de currículos tecnicamente ricos mas que falham nas competências comportamentais básicas.", "descricao": "Em oposição às escolas hard-tech, a Orango empenha-se violentamente em desenvolver metodologias voltadas às 'Soft Skills'. Ministra treinamentos sobre gestão de conflitos pacíficos e liderança servidora, blindando emocionalmente jovens líderes perante crises no engajamento corporativo e instabilidade nos times de base.", "url": "https://orango.com.br/" },
+  { "id": "eo-037", "nome": "Sesc Digital", "categoria": "Formação Técnica e Cultura", "emoji": "🏛️", "dor_resolvida": "Os altos muros institucionais que monopolizam o conhecimento acadêmico estritamente focado em sociologia da arte, patrimônio da memória e literatura.", "descricao": "Demonstração brilhante de força EAD pública do Sesc no online. Expõe sem receio um catálogo majestoso navegando desde as influências da Tropicália até processos rigorosos de educação ambiental territorial. Um centro livre e chancelado que combate a atrofia cultural brasileira, produzindo questionamentos e diplomas autênticos.", "url": "https://ead.sesc.digital/" },
+  { "id": "eo-038", "nome": "TIM Tec", "categoria": "Programação e Tecnologia", "emoji": "💻", "dor_resolvida": "Isolamento imposto pela extrema barreira analítica de entender estruturas de dados complexas antes de começar a brincar visualmente com web-design.", "descricao": "Sob a proteção infraestrutural do Instituto TIM, essa vitrine EAD dedica seu peso máximo no fomento das Tecnologias da Informação (TICs) aplicadas. Fornece o empurrão matricial aos novatos, conectando front-end estético (desenho de páginas) com a severa engenharia dos bancos de dados que o sustentam por trás.", "url": "https://timtec.com.br/" },
+  { "id": "eo-039", "nome": "Qualifica TIM", "categoria": "Gestão e Negócios", "emoji": "📱", "dor_resolvida": "Fadiga colossal do pacote de dados da internet móvel limitando gravemente alunos que precisam estudar presencialmente durante deslocamentos metropolitanos de longa duração.", "descricao": "Com uma engenharia robusta centrada apenas no Mobile, atua encapsulado em um app com quase duas centenas de trilhas curtas focadas no empreendedorismo tático. Seu verdadeiro tesouro reside no armazenamento bufferizado: o aluno descarrega o módulo inteiro no Wi-Fi domiciliar e assimila o conteúdo desconectado no ônibus sem consumir as cotas da sua franquia de dados.", "url": "https://www.tim.com.br/para-voce/servicos-tim/qualifica" },
+  { "id": "eo-040", "nome": "Descomplica TIM [Acesso Livre]", "categoria": "Gestão e Negócios", "emoji": "🚀", "dor_resolvida": "A contínua frustração de ser barrado por limites de zero-rating na conexão 4G/5G ao tentar visualizar capacitação executiva dinâmica.", "descricao": "Resultado de um forte acordo comercial: a operadora assume o custo logístico de trafegar os vídeos dos combos da Descomplica para seus assinantes ativados. Traz, de forma limpa, pílulas extremamente cirúrgicas em Gestão de Equipes Híbridas, Tráfego Pago essencial e Empreendedorismo focado em pequenos nichos geolocalizados.", "url": "https://descomplica.com.br/tim/" },
+  { "id": "eo-041", "nome": "Blip Academy", "categoria": "Programação e Tecnologia", "emoji": "🤖", "dor_resolvida": "Extrema opacidade didática da informação impedindo leigos curiosos de ingressarem no lucrativo ecossistema corporativo de Bots e Inteligência Artificial generativa.", "descricao": "Arquitetada por gigantes que desenham a comunicação instantânea nacional, destina-se a curar a imensa falta de projetistas de fluxos conversacionais inteligentes. A Academia mergulha na lógica condicional bruta para WhatsApp e transbordo, diplomando formalmente os arquitetos e analistas responsáveis pelo futuro do atendimento corporativo humano-máquina no Brasil.", "url": "https://academy.blip.ai/" }
+]
