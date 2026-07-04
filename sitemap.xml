@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://estudaronline.org/</loc>
-        <changefreq>daily</changefreq>
+        <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://estudaronline.org/sobre.html</loc>
+        <loc>https://estudaronline.org/politica-de-privacidade.html</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
+        <priority>0.5</priority>
     </url>
     <url>
-        <loc>https://estudaronline.org/privacidade.html</loc>
-        <changefreq>yearly</changefreq>
-        <priority>0.5</priority>
+        <loc>https://estudaronline.org/contato.html</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
