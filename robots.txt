@@ -1,8 +1,6 @@
 User-agent: *
-Allow: /
-
-# Bloqueio estratégico para evitar indexação duplicada de buscas dinâmicas e parâmetros de modal do history API
 Disallow: /*?q=*
-Disallow: /*?modal=*
+Disallow: /cdn-cgi/
+Allow: /
 
 Sitemap: https://estudaronline.org/sitemap.xml
