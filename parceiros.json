@@ -1,5 +1,23 @@
 [
-  { "nome": "Trabalho e Futuro", "emoji": "🚀", "url": "https://trabalhoefuturo.com/" },
-  { "nome": "Viajar com Seguro", "emoji": "🛡️", "url": "https://viajarcomseguro.com/" },
-  { "nome": "Café Pra Viagem", "emoji": "☕", "url": "https://cafepraviagem.com/" }
+  {
+    "id": "p-001",
+    "nome": "0800 Eu Vou",
+    "categoria": "Eventos & Cultura",
+    "descricao": "Acesse a agenda de eventos gratuitos e democratize seu acesso à cidade.",
+    "url": "https://0800euvou.com/"
+  },
+  {
+    "id": "p-002",
+    "nome": "Trabalho e Futuro",
+    "categoria": "Carreira & Ferramentas",
+    "descricao": "Tome decisões inteligentes e contorne os pontos de exclusão do mercado.",
+    "url": "https://trabalhoefuturo.com/"
+  },
+  {
+    "id": "p-003",
+    "nome": "Viajar com Seguro",
+    "categoria": "Planejamento & Segurança",
+    "descricao": "A proteção exata para a sua jornada, sem jargões e letras miúdas.",
+    "url": "https://viajarcomseguro.com/"
+  }
 ]

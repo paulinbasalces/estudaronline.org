@@ -1,33 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nossa Curadoria | Estudar Online</title>
+    <title>Sobre a Curadoria | Estudar Online</title>
+    <meta name="description" content="Conheça nossa análise estratégica para mapear plataformas educacionais gratuitas e remover barreiras ocultas no aprendizado.">
+    <link rel="canonical" href="https://estudaronline.org/sobre.html">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="glass-panel main-header">
-        <nav aria-label="Navegação principal">
-            <a href="index.html" class="logo">Estudar<span>Online</span></a>
-            <div class="a11y-controls">
-                <button type="button" id="btn-theme" aria-label="Alternar tema claro e escuro"><span aria-hidden="true">🌗</span></button>
+    <a class="skip-link" href="#conteudo-principal">Acessar o conteúdo principal</a>
+
+    <header class="cabecalho-site">
+        <div class="container nav-bar">
+            <a class="logotipo" href="./index.html">Estudar<span>Online</span></a>
+            <div class="controles-a11y">
+                <button type="button" id="btn-fonte-menos" class="btn-a11y" aria-label="Diminuir tamanho da fonte no site">A-</button>
+                <button type="button" id="btn-fonte-mais" class="btn-a11y" aria-label="Aumentar tamanho da fonte no site">A+</button>
+                <button type="button" id="btn-tema" class="btn-a11y" aria-label="Alternar entre modo escuro e claro">🌓</button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main class="glass-panel container-main" style="margin-top: 40px; padding: 40px;">
-        <h1 style="color: var(--deep-purple); margin-bottom: 20px;">Sobre Nossa Metodologia</h1>
-        <p>O <strong>Estudar Online</strong> foi criado com um único objetivo: facilitar o acesso ao conhecimento formal de qualidade sem que a barreira financeira seja um impeditivo.</p>
+    <main class="container" id="conteudo-principal" style="padding-top: 80px; max-width: 800px; margin: 0 auto; min-height: 60vh;">
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 24px;">Análise Estratégica do Aprendizado</h1>
         
-        <h2 style="margin-top: 2rem; color: var(--amber);">O que nós fazemos?</h2>
-        <p>Nós varremos a internet e testamos ativamente plataformas educacionais, avaliando não apenas a gratuidade do curso, mas também a gratuidade do <strong>certificado</strong>, as pegadinhas e os bloqueios em testes práticos.</p>
-        <p>Organizamos esse conhecimento para que alunos, jovens aprendizes e profissionais em transição de carreira percam menos tempo procurando e passem mais tempo se especializando.</p>
-        
-        <div style="margin-top: 3rem;">
-            <a href="index.html" style="color: var(--deep-purple); font-weight: bold; text-decoration: none;">&larr; Retornar para a Curadoria</a>
+        <div class="artigo-corpo">
+            <p id="artigo-descricao" style="margin-bottom: 24px; font-size: 1.15rem; color: var(--text-main);">O Estudar Online mapeia o ecossistema de educação na internet para localizar e eliminar os pontos de exclusão que impedem o acesso ao ensino de alta qualidade.</p>
+            
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">Nossa Metodologia</h2>
+            <p style="margin-bottom: 16px; font-size: 1.05rem; color: var(--text-main);">Aplicamos uma verificação objetiva sobre cada plataforma listada. Não validamos iniciativas que se apresentam como gratuitas, mas que possuem barreiras ocultas, como taxas surpresas para emissão de certificados ou arquitetura de informação inacessível.</p>
+            
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);">Priorizamos a utilidade prática. Cada curso passa por um filtro que avalia as seguintes etapas:</p>
+            
+            <ul style="list-style-type: square; padding-left: 24px; margin-bottom: 40px; color: var(--text-main); font-size: 1.05rem;">
+                <li style="margin-bottom: 12px;"><strong>Acesso Universal:</strong> O conteúdo deve estar disponível sem restrições financeiras primárias.</li>
+                <li style="margin-bottom: 12px;"><strong>Arquitetura da Informação:</strong> A plataforma original deve possuir uma navegação clara, respeitando as lógicas essenciais de usabilidade.</li>
+                <li style="margin-bottom: 12px;"><strong>Honestidade Intelectual:</strong> Sinalizamos os trade-offs de cada sistema. Se um curso gratuito não emite diploma chancelado ou exige leitura em outro idioma, nós apontamos o limite de forma direta.</li>
+            </ul>
+
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">O Futuro do Trabalho</h2>
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);">Projetamos experiências focadas na inclusão real. Fornecemos as ferramentas necessárias para que você construa a sua própria trilha de conhecimento contornando as lacunas do ensino tradicional.</p>
+            
+            <div style="margin-top: 40px;">
+                <a href="./index.html" class="btn-primario" style="display: inline-block; padding: 16px 32px; max-width: 100%;">Explorar Plataformas de Cursos</a>
+            </div>
         </div>
     </main>
+
+    <footer class="rodape-site">
+        <div class="container">
+            <p>&copy; 2026 Estudar Online. Democratizando o acesso ao conhecimento.</p>
+            <nav class="links-rodape">
+                <a href="sobre.html">Como avaliamos</a>
+                <a href="privacidade.html">Sua Privacidade</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

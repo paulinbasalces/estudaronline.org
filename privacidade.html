@@ -1,35 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-BR" data-theme="light">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidade e Termos | Estudar Online</title>
+    <title>Política de Privacidade | Estudar Online</title>
+    <meta name="description" content="Entenda de forma clara e direta como o Estudar Online trata a sua privacidade na internet.">
+    <link rel="canonical" href="https://estudaronline.org/privacidade.html">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="glass-panel main-header">
-        <nav aria-label="Navegação principal">
-            <a href="index.html" class="logo">Estudar<span>Online</span></a>
-            <div class="a11y-controls">
-                <button type="button" id="btn-theme" aria-label="Alternar tema claro e escuro"><span aria-hidden="true">🌗</span></button>
+    <a class="skip-link" href="#conteudo-principal">Acessar o conteúdo principal</a>
+
+    <header class="cabecalho-site">
+        <div class="container nav-bar">
+            <a class="logotipo" href="./index.html">Estudar<span>Online</span></a>
+            <div class="controles-a11y">
+                <button type="button" id="btn-fonte-menos" class="btn-a11y" aria-label="Diminuir tamanho da fonte no site">A-</button>
+                <button type="button" id="btn-fonte-mais" class="btn-a11y" aria-label="Aumentar tamanho da fonte no site">A+</button>
+                <button type="button" id="btn-tema" class="btn-a11y" aria-label="Alternar entre modo escuro e claro">🌓</button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main class="glass-panel container-main" style="margin-top: 40px; padding: 40px;">
-        <h1 style="color: var(--deep-purple); margin-bottom: 20px;">Política de Transparência e Privacidade</h1>
-        <p>A governança do portal <strong>Estudar Online</strong> opera sob os preceitos éticos da clareza e remoção de barreiras ocultas. A presente política explicita como lidamos com os dados rastreados anonimamente via nossa interface tecnológica.</p>
+    <main class="container" id="conteudo-principal" style="padding-top: 80px; max-width: 800px; margin: 0 auto; min-height: 60vh;">
+        <h1 class="hero-title" style="font-size: 3rem; margin-bottom: 24px;">Privacidade e Dados</h1>
         
-        <h2 style="margin-top: 2rem; color: var(--amber);">1. Protocolos de Coleta (Google Analytics)</h2>
-        <p>Não exigimos cadastros, não capturamos e-mails, senhas ou histórico pessoal identificável. Utilizamos exclusivamente os scripts do Google Tag Manager para mapear eventos de clique, auxiliando-nos a descobrir quais ferramentas possuem maior valor prático para os usuários e aprimorar nossa interface estrutural.</p>
-        
-        <h2 style="margin-top: 2rem; color: var(--amber);">2. Modelo de Monetização (Google AdSense)</h2>
-        <p>Para viabilizar a manutenção da curadoria técnica, empregamos a rede de anúncios do Google AdSense. Estes sistemas operacionais de terceiros injetam cookies temporários no seu navegador baseando-se em interações de consumo digital prévias, exibindo anúncios de maior relevância comportamental. O usuário possui total autonomia para revogar essa personalização acessando diretamente as preferências da Conta Google.</p>
-        
-        <div style="margin-top: 3rem;">
-            <a href="index.html" style="color: var(--deep-purple); font-weight: bold; text-decoration: none;">&larr; Retornar para a Curadoria</a>
+        <div class="artigo-corpo">
+            <p id="artigo-descricao" style="margin-bottom: 32px; font-size: 1.15rem; color: var(--text-main);">A transparência guia as nossas operações. Esta página explica como o sistema funciona para garantir que não existam barreiras ocultas em relação à sua privacidade.</p>
+            
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">1. Restrição de Coleta de Dados</h2>
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);"><strong>Nós não coletamos dados pessoais.</strong> O portal opera de maneira estática e não possui bancos de dados para registro de contas, e-mails ou históricos de acesso individual. Todo o processo de busca ocorre no seu navegador, sem enviar comandos para os nossos servidores.</p>
+            
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">2. Armazenamento Local de Preferências</h2>
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);">Utilizamos a função de armazenamento local do seu navegador (Local Storage) unicamente para manter as suas escolhas de acessibilidade. O sistema memoriza:</p>
+            <ul style="list-style-type: square; padding-left: 24px; margin-bottom: 24px; color: var(--text-main); font-size: 1.05rem;">
+                <li style="margin-bottom: 8px;">A escolha do tema visual (Claro ou Escuro).</li>
+                <li style="margin-bottom: 8px;">O nível de ajuste da escala da fonte.</li>
+            </ul>
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);">Essas variáveis permanecem armazenadas no seu dispositivo e não são transferidas em nenhum momento.</p>
+
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">3. Links Externos e Ambientes Terceirizados</h2>
+            <p style="margin-bottom: 24px; font-size: 1.05rem; color: var(--text-main);">O painel fornece a curadoria de links para plataformas de ensino. Ao clicar nestes links, você encerra a sua sessão no Estudar Online e passa a operar sob as diretrizes de privacidade de cada instituição responsável pelo curso.</p>
+
+            <h2 style="font-family: var(--font-display); margin: 40px 0 16px; color: var(--accent-secondary);">4. Análise de Tráfego Macro</h2>
+            <p style="margin-bottom: 40px; font-size: 1.05rem; color: var(--text-main);">Aplicamos serviços de análise genérica apenas para observar o volume de tráfego de entrada e a taxa de falhas do servidor. Esses processos não rastreiam indivíduos e não criam perfis de usuários.</p>
+            
+            <div style="margin-top: 40px;">
+                <a href="./index.html" class="btn-primario" style="display: inline-block; padding: 16px 32px; max-width: 100%;">Retornar ao Painel de Buscas</a>
+            </div>
         </div>
     </main>
+
+    <footer class="rodape-site">
+        <div class="container">
+            <p>&copy; 2026 Estudar Online. Democratizando o acesso ao conhecimento.</p>
+            <nav class="links-rodape">
+                <a href="sobre.html">Como avaliamos</a>
+                <a href="privacidade.html">Sua Privacidade</a>
+            </nav>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
