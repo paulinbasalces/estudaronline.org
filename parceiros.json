@@ -1,23 +1,23 @@
 [
   {
-    "id": 1,
-    "nome": "Hostinger",
-    "vantagem": "75% OFF em Hospedagem (Crie seu Portfólio)",
-    "url": "https://hostinger.com/afiliado",
-    "emoji": "🖥️"
+    "id": "p-001",
+    "nome": "0800 Eu Vou",
+    "categoria": "Eventos & Cultura",
+    "descricao": "Acesse a agenda de eventos gratuitos e democratize seu acesso à cidade.",
+    "url": "https://0800euvou.com/"
   },
   {
-    "id": 2,
-    "nome": "Coursera Plus",
-    "vantagem": "Teste de 7 Dias Grátis + Projetos Práticos",
-    "url": "https://coursera.org/afiliado",
-    "emoji": "🎓"
+    "id": "p-002",
+    "nome": "Trabalho e Futuro",
+    "categoria": "Carreira & Ferramentas",
+    "descricao": "Tome decisões inteligentes e contorne os pontos de exclusão do mercado.",
+    "url": "https://trabalhoefuturo.com/"
   },
   {
-    "id": 3,
-    "nome": "Notion",
-    "vantagem": "Organize seus estudos gratuitamente",
-    "url": "https://notion.so/afiliado",
-    "emoji": "📝"
+    "id": "p-003",
+    "nome": "Viajar com Seguro",
+    "categoria": "Planejamento & Segurança",
+    "descricao": "A proteção exata para a sua jornada, sem jargões e letras miúdas.",
+    "url": "https://viajarcomseguro.com/"
   }
 ]

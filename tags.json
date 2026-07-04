@@ -1,20 +1,20 @@
 {
-  "Freemium": {
-    "label": "Freemium",
+  "Sem Certificado": {
+    "label": "Sem Certificado",
     "color": "var(--accent-primary)",
-    "bg": "rgba(232, 93, 4, 0.1)",
-    "border": "rgba(232, 93, 4, 0.25)"
+    "bg": "rgba(235, 103, 46, 0.12)",
+    "border": "rgba(235, 103, 46, 0.3)"
   },
-  "Cadastro Obrigatório": {
-    "label": "Cadastro Obrigatório",
+  "Acesso Livre": {
+    "label": "Acesso Livre",
     "color": "var(--text-main)",
-    "bg": "rgba(13, 33, 37, 0.1)",
-    "border": "rgba(13, 33, 37, 0.2)"
+    "bg": "rgba(38, 66, 43, 0.1)",
+    "border": "rgba(38, 66, 43, 0.2)"
   },
-  "Beta Fechado": {
-    "label": "Beta Fechado",
+  "Modo Ouvinte": {
+    "label": "Modo Ouvinte",
     "color": "var(--text-muted)",
-    "bg": "rgba(61, 90, 95, 0.1)",
-    "border": "rgba(61, 90, 95, 0.25)"
+    "bg": "rgba(93, 55, 42, 0.1)",
+    "border": "rgba(93, 55, 42, 0.25)"
   }
 }
