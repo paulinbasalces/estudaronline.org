@@ -380,13 +380,18 @@ document.addEventListener('DOMContentLoaded', () => {
             );
 
         const categorias = [
-            'Todas',
-            ...new Set(
-                baseDeDados.map(
-                    i => i.categoria
-                )
+    'Todas',
+    ...new Set(
+        baseDeDados.map(
+            i => (
+                i.categoria &&
+                i.categoria.trim()
             )
-        ];
+                ? i.categoria.trim()
+                : 'Outros'
+        )
+    )
+];
 
         const mapaEmojis = {};
 
@@ -560,27 +565,28 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const grupos =
-            filtradas.reduce(
-                (acc,obj) => {
+    filtradas.reduce(
+        (acc, obj) => {
 
-                    if(
-                        !acc[
-                            obj.categoria
-                        ]
-                    ) {
-                        acc[
-                            obj.categoria
-                        ] = [];
-                    }
+            const categoria =
+                (
+                    obj.categoria &&
+                    obj.categoria.trim()
+                )
+                    ? obj.categoria.trim()
+                    : 'Outros';
 
-                    acc[
-                        obj.categoria
-                    ].push(obj);
+            if (!acc[categoria]) {
+                acc[categoria] = [];
+            }
 
-                    return acc;
+            acc[categoria].push(obj);
 
-                }, {}
-            );
+            return acc;
+
+        },
+        {}
+    );
         container.innerHTML =
             Object.keys(grupos)
             .map((cat, idx, arr) => {
