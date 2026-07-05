@@ -3,6 +3,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let baseDeDados = [];
     let configTags = {};
     let categoriaAtiva = 'Todas';
+	function obterCategoria(item) {
+    return (
+        item.area ||
+        item.categoria ||
+        'Outros'
+    ).trim();
+}
 
     const htmlElement = document.documentElement;
     const CONSENT_KEY = 'estudaronline_cookie_consent';
@@ -202,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 .textContent =
                 new Set(
                     baseDeDados.map(
-                        i => i.categoria
+                        i => obterCategoria(i)
                     )
                 ).size;
 
@@ -400,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const match =
                 baseDeDados.find(
                     i =>
-                    i.categoria ===
+                    obterCategoria(i) ===
                     cat
                 );
 
@@ -423,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     ? baseDeDados.length
                     : baseDeDados.filter(
                         i =>
-                        i.categoria ===
+                        obterCategoria(i) ===
                         cat
                     ).length;
 
@@ -521,7 +528,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         categoriaAtiva ===
                         'Todas'
                         ||
-                        item.categoria ===
+                        obterCategoria(item) ===
                         categoriaAtiva;
 
                     return (
@@ -569,12 +576,7 @@ document.addEventListener('DOMContentLoaded', () => {
         (acc, obj) => {
 
             const categoria =
-                (
-                    obj.categoria &&
-                    obj.categoria.trim()
-                )
-                    ? obj.categoria.trim()
-                    : 'Outros';
+    obterCategoria(obj);
 
             if (!acc[categoria]) {
                 acc[categoria] = [];
@@ -696,7 +698,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <span class="card-tag">
 
                                     ${escaparHTML(
-                                        item.categoria
+                                        obterCategoria(item)
                                     )}
 
                                 </span>
