@@ -1,8 +1,27 @@
+# Estudar Online
+# https://estudaronline.org
+
 User-agent: *
+
 Allow: /
 
-# Bloqueio estratégico para evitar indexação duplicada de buscas dinâmicas e parâmetros de modal do history API
-Disallow: /*?q=*
-Disallow: /*?modal=*
+# Páginas institucionais
+Allow: /sobre.html
+Allow: /privacidade.html
+Allow: /termos.html
+Allow: /cookies.html
+Allow: /contato.html
+Allow: /politica-publicidade.html
 
+# Recursos estáticos
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.json$
+Allow: /*.jpg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /favicon.ico
+Allow: /manifest.webmanifest
+
+# Sitemap oficial
 Sitemap: https://estudaronline.org/sitemap.xml

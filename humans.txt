@@ -1,0 +1,18 @@
+/* TEAM */
+
+Owner: Paulin Basalces
+Contact: basalces@duck.com
+Site: https://estudaronline.org
+
+/* PROJECT */
+
+Project: Estudar Online
+Description: Hub educacional aberto
+Standards: HTML5, CSS3, WCAG 2.2
+Language: Portuguese (Brazil)
+
+/* TECHNOLOGY */
+
+Hosting: GitHub Pages
+Analytics: Google Tag Manager
+Ads: Google AdSense
