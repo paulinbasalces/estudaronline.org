@@ -1164,3 +1164,85 @@ html {
 /* =====================================================
    FIM DO ARQUIVO
 ===================================================== */
+
+/* =====================================================
+   FOOTER PROFISSIONAL
+===================================================== */
+
+.footer-site{
+    margin-top:120px;
+    padding:60px 40px 30px;
+    border-radius:32px 32px 0 0;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:
+        2fr
+        1fr
+        1fr
+        1.2fr;
+    gap:48px;
+}
+
+.footer-column{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.footer-logo{
+    font-family:var(--font-display);
+    font-size:1.8rem;
+    color:var(--text-main);
+}
+
+.footer-logo span{
+    color:var(--accent-primary);
+}
+
+.footer-description,
+.footer-origin,
+.footer-column p{
+    color:var(--text-muted);
+    line-height:1.7;
+}
+
+.footer-column h4{
+    color:var(--text-main);
+    margin-bottom:8px;
+}
+
+.footer-column a{
+    color:var(--text-muted);
+    text-decoration:none;
+    transition:.2s;
+}
+
+.footer-column a:hover{
+    color:var(--accent-primary);
+}
+
+.footer-bottom{
+    margin-top:48px;
+    padding-top:24px;
+    border-top:1px solid var(--glass-border);
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+    color:var(--text-muted);
+    font-size:.9rem;
+}
+
+@media (max-width:900px){
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:36px;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
